@@ -2,75 +2,577 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#0b0b0f" />
-  <title>Holland Digital</title>
+  <title>Holland Digital — Performance Web & Growth</title>
+  <meta name="description" content="Premium performance websites + paid growth systems for ambitious brands. Conversion-first design. Meta + Google. Optimised weekly." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900;1000&display=swap" rel="stylesheet" />
 
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
+</head>
+
+<body class="theme-dark">
+
+  <!-- NAV -->
   <nav class="nav">
-    <a class="brand" href="#top">Holland<span>Digital</span></a>
+    <a class="brand" href="#top" aria-label="Holland Digital Home">
+      <span class="brand__box">Holland<span>Digital</span></span>
+    </a>
+
     <div class="nav__links">
       <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-      <a href="#contact" class="btn btn--primary">Book a call</a>
+      <a href="#results">Results</a>
+      <a href="#process">Process</a>
+      <a href="tel:0448359099" class="nav__phone">0448 359 099</a>
+      <a href="#" class="cta js-calendly">BOOK A STRATEGY CALL</a>
     </div>
+
+    <button class="nav__burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
+  <!-- MOBILE MENU -->
+  <div class="mobile" data-mobile>
+    <div class="mobile__panel">
+      <a href="#services">Services</a>
+      <a href="#results">Results</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+      <a href="tel:0448359099">Call: 0448 359 099</a>
+      <a href="#" class="cta js-calendly">BOOK A STRATEGY CALL</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
   <header id="top" class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__grid"></div>
+
     <div class="container hero__wrap">
       <div class="hero__left">
-        <h1>Turn clicks into <span class="accent">customers.</span></h1>
-        <p>We build and manage high-performing ad campaigns and conversion-focused websites that scale brands—fast.</p>
-        <div class="hero__actions">
-          <a class="btn btn--primary" href="#contact">Book a call</a>
-          <a class="btn btn--ghost" href="#services">See services</a>
+        <div class="pill reveal">
+          <span class="dot"></span>
+          PERFORMANCE WEB • META ADS • GOOGLE ADS • CREATIVE
+        </div>
+
+        <h1 class="reveal">
+          Websites That <span class="accent">Convert.</span><br/>
+          Ads That <span class="accent">Dominate.</span>
+        </h1>
+
+        <p class="reveal">
+          Holland Digital builds premium conversion-first websites and scalable paid growth systems for ambitious brands.
+          Built to perform. Optimised weekly. Designed to win.
+        </p>
+
+        <div class="hero__actions reveal">
+          <a href="#" class="cta js-calendly">BOOK A STRATEGY CALL</a>
+          <a class="btn btn--ghost" href="#results">SEE RESULTS</a>
+        </div>
+
+        <div class="proof reveal">
+          <div class="proof__item">
+            <strong>⚡ Fast Launch</strong>
+            <span>7–14 day builds</span>
+          </div>
+          <div class="proof__item">
+            <strong>📈 Conversion-First</strong>
+            <span>Designed to sell</span>
+          </div>
+          <div class="proof__item">
+            <strong>🔥 Paid Growth</strong>
+            <span>Meta + Google systems</span>
+          </div>
+        </div>
+
+        <div class="trust reveal">
+          <span class="trust__label">Trusted by:</span>
+          <div class="trust__row">
+            <div class="trust__chip">Summit Earthworks</div>
+            <div class="trust__chip">AUS Construction Apparel</div>
+            <div class="trust__chip">+ Your Brand</div>
+          </div>
         </div>
       </div>
+
+      <div class="hero__right reveal">
+        <!-- Optional: Your HD flame graphic -->
+        <!-- Put your file in /assets and update the src -->
+        <div class="hero__art">
+          <img class="hero__img" src="assets/hd-flame.png" alt="" aria-hidden="true" />
+          <div class="hero__ring"></div>
+          <div class="hero__ring hero__ring--2"></div>
+        </div>
+
+        <div class="hero__stats">
+          <div class="stat">
+            <strong>95+</strong>
+            <span>Speed targets</span>
+          </div>
+          <div class="stat">
+            <strong>3–7</strong>
+            <span>Angles tested</span>
+          </div>
+          <div class="stat">
+            <strong>Weekly</strong>
+            <span>Optimisation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__mouse"></div>
     </div>
   </header>
 
+  <!-- CALLOUT -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="split">
+        <div class="split__left reveal">
+          <h2 class="h2">Most websites don't convert. Most ads don't scale.</h2>
+          <p class="muted">
+            Pretty design is useless without structure, tracking, and optimisation.
+            We build performance systems — engineered to convert and built to scale.
+          </p>
+        </div>
+        <div class="split__right reveal">
+          <div class="calloutCard">
+            <h3>What you get (every time)</h3>
+            <ul class="ticks">
+              <li>Conversion-first layout + copy structure</li>
+              <li>Tracking setup (Pixel, GA4, events)</li>
+              <li>Speed + mobile optimisation</li>
+              <li>Lead capture + funnel-ready pages</li>
+              <li>Ongoing optimisation & reporting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
   <section id="services" class="section">
     <div class="container">
-      <h2 class="section__title">Services</h2>
+      <div class="sectionHead">
+        <h2 class="h2 reveal">Services built for <span class="accent">performance</span></h2>
+        <p class="muted reveal">Everything you need to build, launch, and scale — without the agency fluff.</p>
+      </div>
+
       <div class="grid grid--3">
-        <div class="card">
-          <h3>Meta & TikTok Ads</h3>
-          <p>Full-funnel campaigns, testing, scaling, and reporting.</p>
+        <article class="card reveal">
+          <div class="card__top">
+            <h3>Premium Website Builds</h3>
+            <p>High-end websites designed to convert and load fast.</p>
+          </div>
+          <div class="card__more">
+            <p>Conversion-first structure, mobile-first design, SEO basics, tracking installed, and clear CTAs.</p>
+            <a class="mini" href="#contact">Get pricing →</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__top">
+            <h3>Landing Pages + Funnels</h3>
+            <p>Funnels built to turn traffic into enquiries or sales.</p>
+          </div>
+          <div class="card__more">
+            <p>Message-match pages, fast forms, click-to-call, and a clean conversion path.</p>
+            <a class="mini" href="#contact">Build a funnel →</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__top">
+            <h3>Meta Ads Management</h3>
+            <p>Creative testing, scaling, lead quality improvements.</p>
+          </div>
+          <div class="card__more">
+            <p>Full-funnel campaigns, A/B testing, audiences, retargeting, and weekly optimisation.</p>
+            <a class="mini" href="#contact">Run ads →</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__top">
+            <h3>Google Search + Performance Max</h3>
+            <p>High intent traffic when customers are ready to buy.</p>
+          </div>
+          <div class="card__more">
+            <p>Keyword strategy, landing alignment, conversion tracking, bid & budget optimisation.</p>
+            <a class="mini" href="#contact">Scale search →</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__top">
+            <h3>Creative Studio</h3>
+            <p>Scroll-stopping ads built for performance.</p>
+          </div>
+          <div class="card__more">
+            <p>Hook testing, UGC style, statics, variations — built to win the feed.</p>
+            <a class="mini" href="#contact">Make creatives →</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__top">
+            <h3>Ongoing Growth Retainers</h3>
+            <p>Weekly optimisation and scaling systems.</p>
+          </div>
+          <div class="card__more">
+            <p>Reporting, testing roadmap, CRO improvements, creative iteration, scaling strategy.</p>
+            <a class="mini" href="#contact">Work together →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="results" class="section section--alt">
+    <div class="container">
+      <div class="sectionHead">
+        <h2 class="h2 reveal">Performance speaks louder than claims.</h2>
+        <p class="muted reveal">Drop real numbers in here. Even small wins build huge trust.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="case reveal">
+          <div class="case__metric">+37%</div>
+          <div class="case__title">More enquiries</div>
+          <div class="case__body">Conversion rebuild + Meta lead funnel + tracking.</div>
+          <div class="case__client">Summit Earthworks</div>
+        </article>
+
+        <article class="case reveal">
+          <div class="case__metric">3.8x</div>
+          <div class="case__title">ROAS</div>
+          <div class="case__body">Creative testing + scaling winners + retargeting.</div>
+          <div class="case__client">AUS Construction Apparel</div>
+        </article>
+
+        <article class="case reveal">
+          <div class="case__metric">95+</div>
+          <div class="case__title">Mobile speed</div>
+          <div class="case__body">Performance build + asset optimisation + clean UI.</div>
+          <div class="case__client">Your Next Brand</div>
+        </article>
+      </div>
+
+      <div class="ctaStrip reveal">
+        <div>
+          <h3>Want results like this?</h3>
+          <p class="muted">Let's map the fastest path to scale for your business.</p>
         </div>
-        <div class="card">
-          <h3>Google Search</h3>
-          <p>High-intent leads with smart keywords and landing pages.</p>
+        <a href="#" class="cta js-calendly">BOOK A STRATEGY CALL</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="section">
+    <div class="container">
+      <div class="sectionHead">
+        <h2 class="h2 reveal">The Holland Digital Growth Engine</h2>
+        <p class="muted reveal">A simple framework that builds confidence and closes premium clients.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="step reveal">
+          <div class="step__num">01</div>
+          <h3>Foundation</h3>
+          <p>Messaging, structure, conversion layout, and tracking setup.</p>
+        </article>
+
+        <article class="step reveal">
+          <div class="step__num">02</div>
+          <h3>Acquisition</h3>
+          <p>Meta + Google ad systems built to generate qualified demand.</p>
+        </article>
+
+        <article class="step reveal">
+          <div class="step__num">03</div>
+          <h3>Scale</h3>
+          <p>Weekly optimisation, creative testing, CRO, and scaling roadmap.</p>
+        </article>
+      </div>
+
+      <div class="divider reveal"></div>
+
+      <div class="grid grid--2">
+        <div class="panel reveal">
+          <h3>Who this is for</h3>
+          <ul class="ticks">
+            <li>Businesses doing $10k+/month wanting to grow</li>
+            <li>Brands with budget who want a system (not "a website")</li>
+            <li>Owners ready to track, optimise, and scale</li>
+          </ul>
         </div>
-        <div class="card">
-          <h3>Websites & Creative</h3>
-          <p>Conversion-first sites and scroll-stopping creative that converts.</p>
+
+        <div class="panel reveal">
+          <h3>What we don't do</h3>
+          <ul class="ticks ticks--x">
+            <li>Cheap template websites</li>
+            <li>"Set and forget" ads</li>
+            <li>Fluff reports with no action</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="section section--alt">
+  <!-- TRUSTED / CLIENTS -->
+  <section id="trusted" class="section section-clients reveal">
     <div class="container">
-      <h2 class="section__title">Ready to grow?</h2>
-      <p class="section__sub">Book a free strategy call. We'll show you exactly how to get better results.</p>
-      <a class="btn btn--primary" href="mailto:hello@hollanddigital.com">Get in touch</a>
+      <h2 class="h2 reveal">Trusted By <span class="accent">Industry Leaders</span></h2>
+      <p class="section-subtitle muted reveal">
+        Delivering high-performance websites and digital growth for serious brands.
+      </p>
+
+      <div class="trust-badge">
+        <span>⭐ Proven Results</span>
+        <span>🚀 High Conversion Builds</span>
+        <span>🔥 Performance Focused</span>
+      </div>
+
+      <div class="clients-grid">
+        <div class="client-card reveal">
+          <img src="assets/summit-earthworks-logo.png" alt="Summit Earthworks" onerror="this.outerHTML='<div class=client-placeholder>Summit Earthworks</div>'">
+          <div class="client-meta">
+            <strong>Summit Earthworks</strong>
+            <span>Website Build + Lead Capture</span>
+          </div>
+          <div class="client-stats">
+            <div class="stat-chip">
+              <small>Conversion Rate</small>
+              <b>+38%</b>
+            </div>
+            <div class="stat-chip">
+              <small>Leads / Month</small>
+              <b>+64%</b>
+            </div>
+            <div class="stat-chip">
+              <small>Load Speed</small>
+              <b>1.2s</b>
+            </div>
+          </div>
+        </div>
+        <div class="client-card reveal">
+          <img src="assets/aus-construction-apparel-logo.png" alt="AUS Construction Apparel" onerror="this.outerHTML='<div class=client-placeholder>AUS Construction Apparel</div>'">
+          <div class="client-meta">
+            <strong>AUS Construction Apparel</strong>
+            <span>Brand + E-commerce Build</span>
+          </div>
+          <div class="client-stats">
+            <div class="stat-chip">
+              <small>ROAS</small>
+              <b>3.9×</b>
+            </div>
+            <div class="stat-chip">
+              <small>Sales / Month</small>
+              <b>+41%</b>
+            </div>
+            <div class="stat-chip">
+              <small>Cart Rate</small>
+              <b>+22%</b>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section id="faq" class="section section--alt">
+    <div class="container">
+      <div class="sectionHead">
+        <h2 class="h2 reveal">FAQ</h2>
+        <p class="muted reveal">Clear answers = faster closes.</p>
+      </div>
+
+      <div class="faq">
+        <button class="faq__q reveal" aria-expanded="false">
+          <span>How fast can you build a website?</span>
+          <span class="faq__icon">+</span>
+        </button>
+        <div class="faq__a">
+          Most builds launch in 7–14 days depending on page count, content, and approvals.
+        </div>
+
+        <button class="faq__q reveal" aria-expanded="false">
+          <span>Do you do ads AND the website?</span>
+          <span class="faq__icon">+</span>
+        </button>
+        <div class="faq__a">
+          Yes. We build the website/funnel and the paid acquisition system so everything is aligned and trackable.
+        </div>
+
+        <button class="faq__q reveal" aria-expanded="false">
+          <span>What makes you different?</span>
+          <span class="faq__icon">+</span>
+        </button>
+        <div class="faq__a">
+          We're performance-first. You get conversion structure, tracking, weekly optimisation, and a scaling roadmap — not just design.
+        </div>
+
+        <button class="faq__q reveal" aria-expanded="false">
+          <span>Can you work with any industry?</span>
+          <span class="faq__icon">+</span>
+        </button>
+        <div class="faq__a">
+          Yes — if you have budget, offer clarity, and a desire to scale. We tailor the system to your market.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-dark section-contact">
+    <div class="container">
+      <h2 class="cta-title reveal"><span class="accent">Ready to scale?</span></h2>
+      <p class="section-subtitle reveal">Book a strategy call — we'll show you exactly what to fix and how we'd scale it.</p>
+
+      <!-- mini proof stats -->
+      <div class="mini-stats reveal">
+        <div class="mini-stat">
+          <div class="mini-num">14 days</div>
+          <div class="mini-label">Typical launch</div>
+        </div>
+        <div class="mini-stat">
+          <div class="mini-num">+38%</div>
+          <div class="mini-label">Avg conversion lift*</div>
+        </div>
+        <div class="mini-stat">
+          <div class="mini-num">$250k+</div>
+          <div class="mini-label">Spend managed*</div>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <!-- LEFT: booking card -->
+        <div class="contact-card contact-card--primary reveal">
+          <h3>Book a strategy call</h3>
+          <p class="muted">Pick a time that suits you. Takes 30 seconds.</p>
+
+          <ul class="ticklist">
+            <li>Free audit of your ads/site</li>
+            <li>Fast wins + clear next steps</li>
+            <li>No pressure — see if we're a fit</li>
+          </ul>
+
+          <button
+            class="btn primary btn-calendly js-calendly"
+            type="button"
+          >
+            BOOK A STRATEGY CALL
+          </button>
+
+          <div class="tiny tiny-dark">
+            Limited spots each week. If you can't find a time, text us and we'll fit you in.
+          </div>
+        </div>
+
+        <!-- RIGHT: support cards -->
+        <div class="contact-side reveal">
+          <div class="contact-card">
+            <h3>Direct</h3>
+            <p class="muted">Call or text for a quick chat.</p>
+            <a class="pill" href="tel:0448359099">CALL: 0448 359 099</a>
+          </div>
+
+          <div class="contact-card">
+            <h3>What happens next</h3>
+            <ul class="ticklist">
+              <li>We review your site/ads</li>
+              <li>Identify fast wins</li>
+              <li>Map a growth plan</li>
+              <li>Decide if we're a fit</li>
+            </ul>
+          </div>
+
+          <div class="contact-card">
+            <h3>Premium builds</h3>
+            <p class="muted">Want it to feel expensive? We build that.</p>
+            <div class="chips">
+              <span class="chip">Web</span>
+              <span class="chip">Ads</span>
+              <span class="chip">Funnels</span>
+              <span class="chip">CRO</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="tiny tiny-center reveal">
+        *Replace these with your real numbers when ready.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <div>© <span id="y"></span> Holland Digital</div>
-      <div class="footer__links">
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </div>
+    <div class="footer-left">
+      © <span id="y"></span> Holland Digital
+    </div>
+
+    <div class="footlinks">
+      <a href="#services">Services</a>
+      <a href="#results">Results</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="socials">
+      <a href="https://www.instagram.com/digital.holland/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" class="social-icon">
+          <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5.8A4.2 4.2 0 1016.2 12 4.2 4.2 0 0012 7.8zm0 6.9A2.7 2.7 0 1114.7 12 2.7 2.7 0 0112 14.7zm4.5-7.6a1 1 0 11-1-1 1 1 0 011 1z"/>
+        </svg>
+      </a>
+
+      <a href="https://www.facebook.com/profile.php?id=61588367780540" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" class="social-icon">
+          <path d="M14 9h3V6h-3c-2.8 0-5 2.2-5 5v2H7v3h2v6h3v-6h2.3l.7-3H12v-2c0-.6.4-1 1-1z"/>
+        </svg>
+      </a>
+
+      <a href="mailto:jye@holland-digital.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" class="social-icon">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+      </a>
     </div>
   </footer>
+
+  <div class="hd-modal" id="calModal" aria-hidden="true">
+    <div class="hd-modal__backdrop" data-close></div>
+
+    <div class="hd-modal__panel" role="dialog" aria-modal="true" aria-labelledby="calTitle">
+      <div class="hd-modal__top">
+        <div class="hd-modal__titleWrap">
+          <div class="hd-modal__kicker">FREE CONSULTATION</div>
+          <div class="hd-modal__title" id="calTitle">Book a 30-Min Strategy Call</div>
+        </div>
+
+        <button class="hd-modal__close" type="button" aria-label="Close modal" data-close>✕</button>
+      </div>
+
+      <div class="hd-modal__body">
+        <div
+          class="calendly-inline-widget"
+          data-url="https://calendly.com/holland-digital-ywaf/30min"
+          style="min-width:320px;height:720px;">
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
