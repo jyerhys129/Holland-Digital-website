@@ -319,7 +319,7 @@ a:hover{ color:#fff; }
   position: relative;
   z-index: 1;
   display:grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 42px;
   align-items:center;
 }
