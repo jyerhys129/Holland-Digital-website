@@ -17,16 +17,20 @@
   <!-- Canonical -->
   <link rel="canonical" href="https://www.holland-digital.com/google-ads">
 
+    <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --font-body: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
       --bg: #0b0b0f;
       --bg2: #07070a;
       --text: rgba(255,255,255,.92);
@@ -46,7 +50,7 @@
     body {
       background: linear-gradient(180deg, var(--bg), var(--bg2));
       color: var(--text);
-      font-family: var(--font-body);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
       font-weight: 400;
       line-height: 1.6;
       overflow-x: hidden;
@@ -67,6 +71,7 @@
       background: rgba(10,10,14,0.72);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid rgba(255,255,255,0.1);
+      position: relative;
     }
 
     nav::after {
@@ -80,7 +85,7 @@
     }
 
     /* LOGO */
-    .brand {
+    .nav-logo {
       text-decoration: none;
     }
 
@@ -95,7 +100,7 @@
       border: 1px solid rgba(255,255,255,0.18);
       border-radius: 12px;
       padding: 9px 14px;
-      font-family: var(--font-body);
+      font-family: Inter, system-ui, sans-serif;
     }
 
     .brand__box span { color: var(--orange); }
@@ -148,49 +153,6 @@
       border-radius: 2px;
     }
 
-    /* Mobile menu */
-    .mobile{
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,.55);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      display:none;
-      z-index: 998;
-    }
-    .mobile.is-open{ display:block; }
-    .mobile__panel{
-      position:absolute;
-      right: 14px;
-      top: 68px;
-      width: min(340px, calc(100% - 28px));
-      padding: 16px;
-      border-radius: 18px;
-      background: linear-gradient(180deg, rgba(20,20,26,.96), rgba(10,10,14,.96));
-      border: 1px solid rgba(255,255,255,.12);
-      box-shadow: var(--shadow);
-      display:flex;
-      flex-direction:column;
-      gap: 10px;
-    }
-    .mobile__panel a{
-      padding: 12px 12px;
-      border-radius: 12px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.10);
-      color: rgba(255,255,255,0.88);
-      font-weight: 900;
-      font-size: 14px;
-      text-decoration: none;
-    }
-    .mobile__panel a.cta{
-      justify-content: center;
-      text-align: center;
-      background: linear-gradient(135deg, var(--orange), var(--orange2));
-      color: #111 !important;
-      border: 0;
-    }
-
     /* BUTTONS */
     .btn-primary, .cta {
       display: inline-flex;
@@ -212,7 +174,7 @@
       box-shadow: rgba(255,102,0,0.22) 0px 18px 60px;
       color: #111 !important;
       cursor: pointer;
-      font-family: var(--font-body);
+      font-family: Inter, system-ui, sans-serif;
     }
 
     .btn-primary:hover, .cta:hover {
@@ -237,7 +199,7 @@
       border: 1px solid rgba(255,255,255,0.14);
       color: rgba(255,255,255,0.92);
       box-shadow: rgba(0,0,0,0.35) 0px 18px 55px;
-      font-family: var(--font-body);
+      font-family: Inter, system-ui, sans-serif;
     }
 
     .btn-ghost:hover {
@@ -275,7 +237,7 @@
     }
 
     .hero h1 {
-      font-family: var(--font-body);
+      font-family: Inter, system-ui, sans-serif;
       font-size: clamp(72px, 10vw, 140px);
       line-height: 0.92;
       letter-spacing: 0.01em;
@@ -304,6 +266,40 @@
       align-items: center;
     }
 
+    .btn-primary {
+      background: var(--orange);
+      color: #fff;
+      padding: 16px 32px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--orange2);
+      transform: translateY(-2px);
+      box-shadow: var(--shadowH);
+    }
+
+    .btn-ghost {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s;
+    }
+
+    .btn-ghost:hover { color: var(--text); }
+
     .hero-stats {
       position: absolute;
       top: 50%;
@@ -317,7 +313,7 @@
     .hero-stat { text-align: right; }
 
     .hero-stat-num {
-      font-family: var(--font-body);
+      font-family: Inter, system-ui, sans-serif;
       font-size: 52px;
       font-weight: 1000;
       line-height: 1;
@@ -347,7 +343,7 @@
     }
 
     h2 {
-      font-family: var(--font-body);
+      font-family: Inter, system-ui, sans-serif;
       font-size: clamp(42px, 5vw, 72px);
       line-height: 1;
       text-transform: uppercase;
@@ -411,7 +407,7 @@
     .what-item:hover::after { opacity: 0.45; }
 
     .what-num {
-      font-family: var(--font-body);
+      font-family: Inter, system-ui, sans-serif;
       font-size: 48px;
       font-weight: 1000;
       color: var(--border);
@@ -454,7 +450,7 @@
     .process-step:last-child { border-bottom: none; }
 
     .step-num {
-      font-family: var(--font-body);
+      font-family: Inter, system-ui, sans-serif;
       font-size: 56px;
       font-weight: 1000;
       color: var(--border);
@@ -588,7 +584,7 @@
     .result-card:hover::after { opacity: 0.45; }
 
     .result-metric {
-      font-family: var(--font-body);
+      font-family: Inter, system-ui, sans-serif;
       font-size: 64px;
       font-weight: 1000;
       color: var(--orange);
@@ -731,7 +727,7 @@
     }
 
     footer .logo {
-      font-family: var(--font-body);
+      font-family: Inter, system-ui, sans-serif;
       font-size: 18px;
       letter-spacing: 0.08em;
       color: var(--muted);
@@ -779,7 +775,6 @@
 
     /* MOBILE */
     @media (max-width: 768px) {
-      nav { padding: 16px 24px; }
       .nav__links { display: none; }
       .nav__burger { display: block; }
       section { padding: 72px 24px; }
@@ -799,37 +794,22 @@
 <body>
 
   <!-- NAV -->
-  <nav class="nav">
-    <a class="brand" href="index.html#top" aria-label="Holland Digital Home">
+  <nav>
+    <a href="/" class="nav-logo" aria-label="Holland Digital Home">
       <span class="brand__box">Holland<span>Digital</span></span>
     </a>
-
     <div class="nav__links">
-      <a href="index.html#top">Home</a>
-      <a href="index.html#services">Services</a>
-      <a href="index.html#results">Results</a>
-      <a href="index.html#process">Process</a>
+      <a href="/web-design">Web Design</a>
+      <a href="/google-ads">Google Ads</a>
+      <a href="/meta-ads">Meta Ads</a>
+      <a href="/landing-pages">Landing Pages</a>
       <a href="tel:0448359099" class="nav__phone">0448 359 099</a>
-      <a href="#" class="cta js-calendly">BOOK A STRATEGY CALL</a>
+      <a href="/#contact" class="cta">BOOK A STRATEGY CALL</a>
     </div>
-
-    <button class="nav__burger" aria-label="Open menu" aria-expanded="false">
+    <button class="nav__burger" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
-
-  <!-- MOBILE MENU -->
-  <div class="mobile" data-mobile>
-    <div class="mobile__panel">
-      <a href="index.html#top">Home</a>
-      <a href="index.html#services">Services</a>
-      <a href="index.html#results">Results</a>
-      <a href="index.html#process">Process</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="tel:0448359099">Call: 0448 359 099</a>
-      <a href="#" class="cta js-calendly">BOOK A STRATEGY CALL</a>
-    </div>
-  </div>
 
   <!-- HERO -->
   <section class="hero">
@@ -838,7 +818,7 @@
     <h1>Google Ads That<br><em>Dominate.</em></h1>
     <p class="hero-sub">Capture customers the moment they search. We build and manage Google Search and Performance Max campaigns engineered to generate qualified leads at the lowest cost per click.</p>
     <div class="hero-actions">
-      <a href="#" class="cta js-calendly">BOOK A STRATEGY CALL</a>
+      <a href="/#contact" class="cta">BOOK A STRATEGY CALL</a>
       <a href="#results" class="btn-ghost">SEE RESULTS</a>
     </div>
     <div class="hero-stats">
@@ -883,7 +863,7 @@
       </div>
       <div class="what-item">
         <div class="what-num">04</div>
-        <div class="what-title">Bid &amp; Budget Optimisation</div>
+        <div class="what-title">Bid & Budget Optimisation</div>
         <div class="what-desc">Weekly bid adjustments, budget reallocation, and negative keyword management to keep your cost-per-lead dropping.</div>
       </div>
       <div class="what-item">
@@ -910,7 +890,7 @@
     <div class="process-steps">
       <div class="process-step">
         <div class="step-num">01</div>
-        <div class="step-title">Strategy &amp; Audit</div>
+        <div class="step-title">Strategy & Audit</div>
         <div class="step-desc">We audit your account (or start fresh), map your offer, identify the highest-intent keywords, and set your target cost-per-lead.</div>
       </div>
       <div class="process-step">
@@ -920,7 +900,7 @@
       </div>
       <div class="process-step">
         <div class="step-num">03</div>
-        <div class="step-title">Tracking &amp; Launch</div>
+        <div class="step-title">Tracking & Launch</div>
         <div class="step-desc">Conversion tracking verified, quality score checked, bids set. You go live knowing every lead will be tracked.</div>
       </div>
       <div class="process-step">
@@ -943,12 +923,12 @@
       <div class="included-card">
         <h3>Google Search Ads</h3>
         <ul class="included-list">
-          <li>Keyword research &amp; competitor analysis</li>
-          <li>Campaign &amp; ad group structure</li>
-          <li>Ad copywriting &amp; extension setup</li>
+          <li>Keyword research & competitor analysis</li>
+          <li>Campaign & ad group structure</li>
+          <li>Ad copywriting & extension setup</li>
           <li>Conversion tracking (GA4 + GTM)</li>
           <li>Landing page alignment review</li>
-          <li>Weekly bid &amp; negative keyword optimisation</li>
+          <li>Weekly bid & negative keyword optimisation</li>
           <li>Monthly performance report</li>
           <li>Live in 48 hours</li>
         </ul>
@@ -957,12 +937,12 @@
         <h3>Performance Max</h3>
         <ul class="included-list">
           <li>Full asset group build (images, copy, video)</li>
-          <li>Audience signal setup &amp; targeting</li>
+          <li>Audience signal setup & targeting</li>
           <li>Product feed optimisation (e-commerce)</li>
           <li>Smart bidding strategy configuration</li>
-          <li>Weekly asset testing &amp; rotation</li>
+          <li>Weekly asset testing & rotation</li>
           <li>Cross-channel reach (Search, Display, YouTube)</li>
-          <li>Weekly reporting &amp; scaling roadmap</li>
+          <li>Weekly reporting & scaling roadmap</li>
         </ul>
       </div>
     </div>
@@ -1001,29 +981,29 @@
   <div class="divider"></div>
 
   <!-- FAQ -->
-  <section id="faq">
+  <section>
     <p class="section-label">FAQ</p>
     <h2>Common<br>Questions.</h2>
 
     <div class="faq-list">
       <div class="faq-item">
-        <button type="button" class="faq-q">How quickly can you launch my Google Ads? <span class="icon">+</span></button>
+        <button class="faq-q">How quickly can you launch my Google Ads? <span class="icon">+</span></button>
         <div class="faq-a">Most campaigns go live within 48 hours of the strategy call. We move fast without cutting corners — tracking is verified before anything goes live.</div>
       </div>
       <div class="faq-item">
-        <button type="button" class="faq-q">What's the minimum ad budget you recommend? <span class="icon">+</span></button>
+        <button class="faq-q">What's the minimum ad budget you recommend? <span class="icon">+</span></button>
         <div class="faq-a">We typically work with businesses spending $1,500–$2,000/month minimum on ad spend. Below that, there's not enough data to optimise effectively and results are inconsistent.</div>
       </div>
       <div class="faq-item">
-        <button type="button" class="faq-q">Do you also build the landing pages? <span class="icon">+</span></button>
+        <button class="faq-q">Do you also build the landing pages? <span class="icon">+</span></button>
         <div class="faq-a">Yes — and this is where results compound. We can build the landing pages alongside the campaign so ad copy and page messaging are perfectly aligned from day one.</div>
       </div>
       <div class="faq-item">
-        <button type="button" class="faq-q">Can you take over an existing Google Ads account? <span class="icon">+</span></button>
+        <button class="faq-q">Can you take over an existing Google Ads account? <span class="icon">+</span></button>
         <div class="faq-a">Yes. We audit your existing account first, identify what's wasting budget, and rebuild from there. Most inherited accounts have significant wasted spend we can recover quickly.</div>
       </div>
       <div class="faq-item">
-        <button type="button" class="faq-q">What does management cost? <span class="icon">+</span></button>
+        <button class="faq-q">What does management cost? <span class="icon">+</span></button>
         <div class="faq-a">Management fees are scoped to your account size and campaign complexity. Book a strategy call and we'll give you a clear number within 24 hours — no vague ranges.</div>
       </div>
     </div>
@@ -1034,7 +1014,7 @@
     <p class="section-label">Get Started</p>
     <h2>Ready for Google Ads That Actually Convert?</h2>
     <p>Book a free strategy call. We'll audit your current account (or brief from scratch), identify wasted spend, and show you exactly what we'd do differently.</p>
-    <a href="#" class="cta js-calendly">BOOK A FREE STRATEGY CALL</a>
+    <a href="/#contact" class="cta">BOOK A FREE STRATEGY CALL</a>
     <div class="cta-badges">
       <span class="badge">Free account audit</span>
       <span class="badge">No lock-in contracts</span>
@@ -1045,84 +1025,23 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-left">© <span id="y"></span> Holland Digital</div>
+    <div class="footer-left">© 2026 Holland Digital</div>
     <ul class="footer-links">
-      <li><a href="web-design.html">Web Design</a></li>
-      <li><a href="landing-pages.html">Landing Pages</a></li>
-      <li><a href="meta-ads.html">Meta Ads</a></li>
-      <li><a href="google-ads.html">Google Ads</a></li>
+      <li><a href="/web-design">Web Design</a></li>
+      <li><a href="/google-ads">Google Ads</a></li>
       <li><a href="/#services">Services</a></li>
-      <li><a href="/#results">Results</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="/#contact">Contact</a></li>
     </ul>
   </footer>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-
+    // FAQ accordion
     document.querySelectorAll('.faq-q').forEach(btn => {
       btn.addEventListener('click', () => {
         const item = btn.parentElement;
         const isOpen = item.classList.contains('open');
         document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
         if (!isOpen) item.classList.add('open');
-      });
-    });
-
-    const burger = document.querySelector('.nav__burger');
-    const mobile = document.querySelector('[data-mobile]');
-    if (burger && mobile) {
-      burger.addEventListener('click', () => {
-        const open = mobile.classList.toggle('is-open');
-        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-      mobile.addEventListener('click', (e) => {
-        if (e.target === mobile) {
-          mobile.classList.remove('is-open');
-          burger.setAttribute('aria-expanded', 'false');
-        }
-      });
-      mobile.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-          mobile.classList.remove('is-open');
-          burger.setAttribute('aria-expanded', 'false');
-        });
-      });
-    }
-
-    const CALENDLY_URL = 'https://calendly.com/holland-digital-ywaf/30min';
-
-    function loadCalendly() {
-      return new Promise((resolve) => {
-        if (window.Calendly) return resolve(true);
-
-        const existing = document.querySelector('script[data-calendly="true"]');
-        if (existing) {
-          existing.addEventListener('load', () => resolve(true));
-          existing.addEventListener('error', () => resolve(false));
-          return;
-        }
-
-        const s = document.createElement('script');
-        s.src = 'https://assets.calendly.com/assets/external/widget.js';
-        s.async = true;
-        s.dataset.calendly = 'true';
-        s.onload = () => resolve(true);
-        s.onerror = () => resolve(false);
-        document.body.appendChild(s);
-      });
-    }
-
-    document.querySelectorAll('.js-calendly').forEach((btn) => {
-      btn.addEventListener('click', async (e) => {
-        e.preventDefault();
-
-        const ok = await loadCalendly();
-        if (ok && window.Calendly) {
-          window.Calendly.initPopupWidget({ url: CALENDLY_URL });
-        } else {
-          window.open(CALENDLY_URL, '_blank', 'noopener');
-        }
       });
     });
   </script>
