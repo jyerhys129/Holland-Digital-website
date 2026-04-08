@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Title & Meta -->
+  <title>Landing Page Design Australia | High-Converting Funnels | Holland Digital</title>
+  <meta name="description" content="Holland Digital builds high-converting landing pages and sales funnels for Australian businesses. Message-matched, fast, and built to turn ad traffic into leads. Book a free strategy call.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Landing Page Design Australia | Holland Digital">
+  <meta property="og:description" content="High-converting landing pages and funnels built to turn your ad traffic into enquiries and sales. Fast delivery for Australian businesses.">
+  <meta property="og:url" content="https://www.holland-digital.com/landing-pages">
+  <meta property="og:type" content="website">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.holland-digital.com/landing-pages">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --font-body: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      --bg: #0b0b0f;
+      --bg2: #07070a;
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --orange: #ff6600;
+      --orange2: #ff8a00;
+      --border: rgba(255,255,255,.12);
+      --surface: rgba(255,255,255,.06);
+      --surface2: rgba(255,255,255,.04);
+      --radius: 18px;
+      --shadow: 0 22px 70px rgba(0,0,0,.45);
+      --shadowH: 0 34px 110px rgba(0,0,0,.60);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: linear-gradient(180deg, var(--bg), var(--bg2));
+      color: var(--text);
+      font-family: var(--font-body);
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 22px;
+      background: rgba(10,10,14,0.72);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: -1px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,102,0,0.55), transparent);
+      opacity: 0.55;
+      pointer-events: none;
+    }
+
+    /* LOGO */
+    .brand {
+      text-decoration: none;
+    }
+
+    .brand__box {
+      display: inline-flex;
+      gap: 0;
+      align-items: center;
+      font-weight: 1000;
+      letter-spacing: -0.6px;
+      font-size: 20px;
+      color: rgba(255,255,255,0.95);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 12px;
+      padding: 9px 14px;
+      font-family: var(--font-body);
+    }
+
+    .brand__box span { color: var(--orange); }
+
+    /* NAV LINKS */
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav__links a {
+      font-weight: 900;
+      font-size: 14px;
+      color: rgba(255,255,255,0.88);
+      text-decoration: none;
+      text-transform: none;
+      letter-spacing: normal;
+      opacity: 1;
+      transition: transform 0.15s, opacity 0.15s;
+    }
+
+    .nav__links a:hover { transform: translateY(-1px); opacity: 1; }
+
+    .nav__phone {
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.04);
+      font-weight: 900;
+      font-size: 14px;
+      color: rgba(255,255,255,0.88);
+    }
+
+    /* HAMBURGER */
+    .nav__burger {
+      display: none;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .nav__burger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: rgba(255,255,255,0.85);
+      margin: 5px 0;
+      border-radius: 2px;
+    }
+
+    /* Mobile menu */
+    .mobile{
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.55);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display:none;
+      z-index: 998;
+    }
+    .mobile.is-open{ display:block; }
+    .mobile__panel{
+      position:absolute;
+      right: 14px;
+      top: 68px;
+      width: min(340px, calc(100% - 28px));
+      padding: 16px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(20,20,26,.96), rgba(10,10,14,.96));
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: var(--shadow);
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+    }
+    .mobile__panel a{
+      padding: 12px 12px;
+      border-radius: 12px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.10);
+      color: rgba(255,255,255,0.88);
+      font-weight: 900;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .mobile__panel a.cta{
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, var(--orange), var(--orange2));
+      color: #111 !important;
+      border: 0;
+    }
+
+    /* BUTTONS */
+    .btn-primary, .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 18px;
+      border-radius: 999px;
+      font-weight: 900;
+      font-size: 14px;
+      letter-spacing: normal;
+      text-transform: none;
+      text-decoration: none;
+      transition: transform 0.16s, box-shadow 0.16s;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--orange), var(--orange2));
+      border: 0;
+      box-shadow: rgba(255,102,0,0.22) 0px 18px 60px;
+      color: #111 !important;
+      cursor: pointer;
+      font-family: var(--font-body);
+    }
+
+    .btn-primary:hover, .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: rgba(255,102,0,0.3) 0px 24px 72px;
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 18px;
+      border-radius: 999px;
+      font-weight: 900;
+      font-size: 14px;
+      letter-spacing: normal;
+      text-transform: none;
+      text-decoration: none;
+      transition: transform 0.16s, box-shadow 0.16s, border-color 0.16s;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.14);
+      color: rgba(255,255,255,0.92);
+      box-shadow: rgba(0,0,0,0.35) 0px 18px 55px;
+      font-family: var(--font-body);
+    }
+
+    .btn-ghost:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255,102,0,0.25);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 48px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(900px 520px at 18% 10%, rgba(255,102,0,0.16), transparent 62%),
+        radial-gradient(900px 520px at 86% 35%, rgba(255,138,0,0.10), transparent 68%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-body);
+      font-size: clamp(72px, 10vw, 140px);
+      line-height: 0.92;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      max-width: 900px;
+      margin-bottom: 36px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--orange);
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 48px;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .hero-stats {
+      position: absolute;
+      top: 50%;
+      right: 48px;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .hero-stat { text-align: right; }
+
+    .hero-stat-num {
+      font-family: var(--font-body);
+      font-size: 52px;
+      font-weight: 1000;
+      line-height: 1;
+      color: var(--text);
+    }
+
+    .hero-stat-num span { color: var(--orange); }
+
+    .hero-stat-label {
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* SECTIONS */
+    section { padding: 100px 48px; }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-family: var(--font-body);
+      font-size: clamp(42px, 5vw, 72px);
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin-bottom: 24px;
+      color: var(--text);
+    }
+
+    .section-intro {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 560px;
+      line-height: 1.75;
+    }
+
+    /* DIVIDER */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 0 48px;
+    }
+
+    /* WHAT YOU GET */
+    .what-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 64px;
+    }
+
+    .what-item {
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, var(--surface), var(--surface2));
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: 32px 28px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+    }
+
+    .what-item::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(255,102,0,0.55), rgba(255,255,255,0.1), rgba(255,138,0,0.45));
+      mask: linear-gradient(#000 0, #000 0) content-box exclude, linear-gradient(#000 0, #000 0);
+      opacity: 0.18;
+      pointer-events: none;
+      transition: opacity 0.18s;
+    }
+
+    .what-item:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255,102,0,0.35);
+      box-shadow: var(--shadowH);
+    }
+
+    .what-item:hover::after { opacity: 0.45; }
+
+    .what-num {
+      font-family: var(--font-body);
+      font-size: 48px;
+      font-weight: 1000;
+      color: var(--border);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .what-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .what-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* PROCESS */
+    .process-section { background: rgba(255,255,255,0.015); }
+
+    .process-steps {
+      margin-top: 64px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .process-step {
+      display: grid;
+      grid-template-columns: 80px 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+      padding: 40px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .process-step:last-child { border-bottom: none; }
+
+    .step-num {
+      font-family: var(--font-body);
+      font-size: 56px;
+      font-weight: 1000;
+      color: var(--border);
+      line-height: 1;
+    }
+
+    .step-title {
+      font-size: 22px;
+      font-weight: 500;
+      padding-top: 8px;
+      color: var(--text);
+    }
+
+    .step-desc {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.75;
+      padding-top: 8px;
+    }
+
+    /* INCLUDED */
+    .included-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 64px;
+    }
+
+    .included-card {
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, var(--surface), var(--surface2));
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: 36px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+    }
+
+    .included-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(255,102,0,0.55), rgba(255,255,255,0.1), rgba(255,138,0,0.45));
+      mask: linear-gradient(#000 0, #000 0) content-box exclude, linear-gradient(#000 0, #000 0);
+      opacity: 0.18;
+      pointer-events: none;
+      transition: opacity 0.18s;
+    }
+
+    .included-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255,102,0,0.35);
+      box-shadow: var(--shadowH);
+    }
+
+    .included-card:hover::after { opacity: 0.45; }
+
+    .included-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    .included-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .included-list li {
+      font-size: 14px;
+      color: var(--muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      line-height: 1.5;
+    }
+
+    .included-list li::before {
+      content: '→';
+      color: var(--orange);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* RESULTS */
+    .results-section { background: rgba(255,255,255,0.015); }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 64px;
+    }
+
+    .result-card {
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, var(--surface), var(--surface2));
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: 48px 40px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+    }
+
+    .result-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(255,102,0,0.55), rgba(255,255,255,0.1), rgba(255,138,0,0.45));
+      mask: linear-gradient(#000 0, #000 0) content-box exclude, linear-gradient(#000 0, #000 0);
+      opacity: 0.18;
+      pointer-events: none;
+      transition: opacity 0.18s;
+    }
+
+    .result-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255,102,0,0.35);
+      box-shadow: var(--shadowH);
+    }
+
+    .result-card:hover::after { opacity: 0.45; }
+
+    .result-metric {
+      font-family: var(--font-body);
+      font-size: 64px;
+      font-weight: 1000;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .result-label {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .result-context {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .result-client {
+      font-size: 11px;
+      color: var(--orange);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 20px;
+    }
+
+    /* FAQ */
+    .faq-list {
+      margin-top: 64px;
+      max-width: 760px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 500;
+      text-align: left;
+      padding: 28px 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .faq-q .icon {
+      color: var(--orange);
+      font-size: 20px;
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+
+    .faq-item.open .faq-q .icon { transform: rotate(45deg); }
+
+    .faq-a {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.75;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+    }
+
+    .faq-item.open .faq-a {
+      max-height: 300px;
+      padding-bottom: 28px;
+    }
+
+    /* CTA */
+    .cta-section {
+      text-align: center;
+      padding: 120px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(255,102,0,0.06) 0%, transparent 70%);
+    }
+
+    .cta-section h2 {
+      max-width: 700px;
+      margin: 0 auto 24px;
+    }
+
+    .cta-section p {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto 48px;
+    }
+
+    .cta-badges {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      margin-top: 48px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--orange);
+      flex-shrink: 0;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer .logo {
+      font-family: var(--font-body);
+      font-size: 18px;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    footer .logo span { color: var(--orange); }
+
+    .footer-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--text); }
+
+    footer p {
+      font-size: 12px;
+      color: rgba(255,255,255,.3);
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-eyebrow,
+    .hero h1,
+    .hero-sub,
+    .hero-actions {
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .hero h1 { animation-delay: 0.1s; }
+    .hero-sub { animation-delay: 0.2s; }
+    .hero-actions { animation-delay: 0.3s; }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .nav__links { display: none; }
+      .nav__burger { display: block; }
+      section { padding: 72px 24px; }
+      .hero { padding: 0 24px 72px; }
+      .hero-stats { display: none; }
+      .what-grid { grid-template-columns: 1fr; }
+      .included-grid { grid-template-columns: 1fr; }
+      .results-grid { grid-template-columns: 1fr; }
+      .process-step { grid-template-columns: 60px 1fr; }
+      .step-desc { grid-column: 2; }
+      .divider { margin: 0 24px; }
+      footer { flex-direction: column; gap: 24px; text-align: center; }
+      .footer-links { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a class="brand" href="index.html#top" aria-label="Holland Digital Home">
+      <span class="brand__box">Holland<span>Digital</span></span>
+    </a>
+
+    <div class="nav__links">
+      <a href="index.html#top">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#results">Results</a>
+      <a href="index.html#process">Process</a>
+      <a href="tel:0448359099" class="nav__phone">0448 359 099</a>
+      <a href="#" class="cta js-calendly">BOOK A STRATEGY CALL</a>
+    </div>
+
+    <button class="nav__burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile" data-mobile>
+    <div class="mobile__panel">
+      <a href="index.html#top">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#results">Results</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="tel:0448359099">Call: 0448 359 099</a>
+      <a href="#" class="cta js-calendly">BOOK A STRATEGY CALL</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <p class="hero-eyebrow">Landing Pages &amp; Funnels Australia</p>
+    <h1>Pages Built to<br><em>Turn Clicks<br>Into Leads.</em></h1>
+    <p class="hero-sub">Your ads are driving traffic. Are your landing pages converting it? We build message-matched, fast-loading pages engineered to turn every click into an enquiry or sale.</p>
+    <div class="hero-actions">
+      <a href="#" class="cta js-calendly">BOOK A STRATEGY CALL</a>
+      <a href="#results" class="btn-ghost">SEE RESULTS</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">+<span>38</span>%</div>
+        <div class="hero-stat-label">Avg Conversion Lift</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num"><span>5</span>–7</div>
+        <div class="hero-stat-label">Day Delivery</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num"><span>95</span>+</div>
+        <div class="hero-stat-label">PageSpeed Score</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- WHAT YOU GET -->
+  <section>
+    <p class="section-label">What's Included</p>
+    <h2>Every Page.<br>Every Time.</h2>
+    <p class="section-intro">No templates. No drag-and-drop builders. Every landing page is custom-built with one job: converting your ad traffic into real leads.</p>
+
+    <div class="what-grid">
+      <div class="what-item">
+        <div class="what-num">01</div>
+        <div class="what-title">Message-Match Copy</div>
+        <div class="what-desc">Your page copy mirrors your ad headlines exactly — so visitors land and immediately feel they're in the right place.</div>
+      </div>
+      <div class="what-item">
+        <div class="what-num">02</div>
+        <div class="what-title">Mobile-First Build</div>
+        <div class="what-desc">Over 70% of ad traffic lands on mobile. Every page is built mobile-first so your conversion rate doesn't drop on small screens.</div>
+      </div>
+      <div class="what-item">
+        <div class="what-num">03</div>
+        <div class="what-title">Speed Optimisation</div>
+        <div class="what-desc">Every second of load time kills conversions. We target 95+ PageSpeed scores so your traffic actually sticks around.</div>
+      </div>
+      <div class="what-item">
+        <div class="what-num">04</div>
+        <div class="what-title">Full Tracking Setup</div>
+        <div class="what-desc">GA4, Meta Pixel, Google Tag Manager, and form submission events configured so every lead is tracked back to its source.</div>
+      </div>
+      <div class="what-item">
+        <div class="what-num">05</div>
+        <div class="what-title">Fast Forms &amp; Click-to-Call</div>
+        <div class="what-desc">Short, friction-free forms and prominent click-to-call buttons placed at every point a visitor is ready to convert.</div>
+      </div>
+      <div class="what-item">
+        <div class="what-num">06</div>
+        <div class="what-title">A/B Testing Ready</div>
+        <div class="what-desc">Pages are structured so you can test headlines, CTAs, and layouts — so your conversion rate keeps improving over time.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PROCESS -->
+  <section class="process-section">
+    <p class="section-label">How It Works</p>
+    <h2>Live in<br>5–7 Days.</h2>
+    <p class="section-intro">A tight, fast process — from strategy call to live page in under a week. No back-and-forth, no delays.</p>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <div class="step-title">Brief &amp; Strategy</div>
+        <div class="step-desc">We map your offer, your audience, your ad traffic source, and the single action you want visitors to take. Everything flows from this.</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <div class="step-title">Copy &amp; Build</div>
+        <div class="step-desc">Wireframe, copy structure, and full custom build — done in parallel. Message-matched to your exact ad creative. One revision round included.</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <div class="step-title">Tracking &amp; QA</div>
+        <div class="step-desc">Every form submission, pixel fire, and conversion event is tested before launch. You go live knowing every lead will be captured.</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <div class="step-title">Launch &amp; Iterate</div>
+        <div class="step-desc">Go live and start converting. On retainer, we keep testing, tweaking, and improving your page based on real conversion data.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- INCLUDED PACKAGES -->
+  <section>
+    <p class="section-label">Service Options</p>
+    <h2>Pick Your<br>Page Type.</h2>
+    <p class="section-intro">Whether you need a single lead-gen page or a multi-step funnel, we build for conversion — not aesthetics.</p>
+
+    <div class="included-grid">
+      <div class="included-card">
+        <h3>Single Landing Page</h3>
+        <ul class="included-list">
+          <li>Custom single-page build (no templates)</li>
+          <li>Message-matched copy for your ad traffic</li>
+          <li>Mobile-first responsive design</li>
+          <li>GA4 + Meta Pixel + GTM tracking</li>
+          <li>Fast form + click-to-call integration</li>
+          <li>Speed optimisation — 95+ PageSpeed target</li>
+          <li>A/B testing ready structure</li>
+          <li>5–7 day delivery</li>
+        </ul>
+      </div>
+      <div class="included-card">
+        <h3>Multi-Step Funnel</h3>
+        <ul class="included-list">
+          <li>Landing page + thank you page + follow-up</li>
+          <li>Lead qualification flow (multi-step forms)</li>
+          <li>Email capture + CRM integration</li>
+          <li>Full funnel conversion tracking</li>
+          <li>Aligned with Meta or Google ad creative</li>
+          <li>Retargeting pixel setup for non-converters</li>
+          <li>7–10 day delivery</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- RESULTS -->
+  <section class="results-section" id="results">
+    <p class="section-label">Proof</p>
+    <h2>Real Numbers.<br>Real Clients.</h2>
+    <p class="section-intro">Performance speaks louder than claims. Here's what a properly built landing page actually delivers.</p>
+
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="result-metric">+38%</div>
+        <div class="result-label">Conversion Rate Increase</div>
+        <div class="result-context">Landing page rebuild with message-matched copy, faster load time, and a simplified lead capture form.</div>
+        <div class="result-client">Summit Earthworks</div>
+      </div>
+      <div class="result-card">
+        <div class="result-metric">+64%</div>
+        <div class="result-label">More Leads Per Month</div>
+        <div class="result-context">New funnel with dedicated landing page, lead qualification form, and Meta ad alignment.</div>
+        <div class="result-client">Summit Earthworks</div>
+      </div>
+      <div class="result-card">
+        <div class="result-metric">1.2s</div>
+        <div class="result-label">Page Load Speed</div>
+        <div class="result-context">Custom lightweight build with full asset optimisation — keeping bounce rates low and quality scores high.</div>
+        <div class="result-client">Summit Earthworks</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <p class="section-label">FAQ</p>
+    <h2>Common<br>Questions.</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button type="button" class="faq-q">How fast can you build a landing page? <span class="icon">+</span></button>
+        <div class="faq-a">Most single landing pages go live within 5–7 days. Multi-step funnels take 7–10 days. Speed depends on how quickly you can approve copy and design.</div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-q">Do I need to write the copy myself? <span class="icon">+</span></button>
+        <div class="faq-a">No. We write the copy based on your offer and audience. You provide the business details and we handle the rest — including making sure it matches your ad creative.</div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-q">Can you run the ads too? <span class="icon">+</span></button>
+        <div class="faq-a">Yes — and this is where results compound. We build the landing page and manage the Meta or Google ads together, so the copy, creative, and page are perfectly aligned from day one.</div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-q">Do you use page builders like Unbounce or Webflow? <span class="icon">+</span></button>
+        <div class="faq-a">No. We build custom — clean, fast code you own outright. No monthly platform fees, no template limitations, and no performance compromises from bloated builders.</div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-q">What does a landing page cost? <span class="icon">+</span></button>
+        <div class="faq-a">Pricing depends on complexity. Book a strategy call and we'll give you a clear number within 24 hours — no vague ranges, just a straight answer based on your specific needs.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <p class="section-label">Get Started</p>
+    <h2>Ready for a Landing Page That Actually Converts?</h2>
+    <p>Book a free strategy call. We'll review your current funnel, identify where you're losing leads, and map out exactly what we'd build.</p>
+    <a href="#" class="cta js-calendly">BOOK A FREE STRATEGY CALL</a>
+    <div class="cta-badges">
+      <span class="badge">Free funnel audit</span>
+      <span class="badge">No lock-in contracts</span>
+      <span class="badge">5–7 day delivery</span>
+      <span class="badge">Australia-wide</span>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">© <span id="y"></span> Holland Digital</div>
+    <ul class="footer-links">
+      <li><a href="web-design.html">Web Design</a></li>
+      <li><a href="landing-pages.html">Landing Pages</a></li>
+      <li><a href="meta-ads.html">Meta Ads</a></li>
+      <li><a href="google-ads.html">Google Ads</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#results">Results</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    const burger = document.querySelector('.nav__burger');
+    const mobile = document.querySelector('[data-mobile]');
+    if (burger && mobile) {
+      burger.addEventListener('click', () => {
+        const open = mobile.classList.toggle('is-open');
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      mobile.addEventListener('click', (e) => {
+        if (e.target === mobile) {
+          mobile.classList.remove('is-open');
+          burger.setAttribute('aria-expanded', 'false');
+        }
+      });
+      mobile.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          mobile.classList.remove('is-open');
+          burger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    const CALENDLY_URL = 'https://calendly.com/holland-digital-ywaf/30min';
+
+    function loadCalendly() {
+      return new Promise((resolve) => {
+        if (window.Calendly) return resolve(true);
+
+        const existing = document.querySelector('script[data-calendly="true"]');
+        if (existing) {
+          existing.addEventListener('load', () => resolve(true));
+          existing.addEventListener('error', () => resolve(false));
+          return;
+        }
+
+        const s = document.createElement('script');
+        s.src = 'https://assets.calendly.com/assets/external/widget.js';
+        s.async = true;
+        s.dataset.calendly = 'true';
+        s.onload = () => resolve(true);
+        s.onerror = () => resolve(false);
+        document.body.appendChild(s);
+      });
+    }
+
+    document.querySelectorAll('.js-calendly').forEach((btn) => {
+      btn.addEventListener('click', async (e) => {
+        e.preventDefault();
+
+        const ok = await loadCalendly();
+        if (ok && window.Calendly) {
+          window.Calendly.initPopupWidget({ url: CALENDLY_URL });
+        } else {
+          window.open(CALENDLY_URL, '_blank', 'noopener');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
