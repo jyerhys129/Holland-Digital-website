@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Title & Meta -->
+  <title>About Holland Digital | Web Design & Ads Agency Melbourne</title>
+  <meta name="description" content="Holland Digital is a Melbourne-based web design and digital marketing agency. We work closely with Australian businesses to build websites that convert and ads that scale.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Holland Digital | Melbourne Digital Agency">
+  <meta property="og:description" content="Holland Digital is a Melbourne-based agency built on results, not retainers. We work closely with Australian businesses to get the outcomes that matter.">
+  <meta property="og:url" content="https://www.holland-digital.com/about">
+  <meta property="og:type" content="website">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.holland-digital.com/about">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0b0b0f;
+      --bg2: #07070a;
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --orange: #ff6600;
+      --orange2: #ff8a00;
+      --border: rgba(255,255,255,.12);
+      --surface: rgba(255,255,255,.06);
+      --surface2: rgba(255,255,255,.04);
+      --radius: 18px;
+      --shadow: 0 22px 70px rgba(0,0,0,.45);
+      --shadowH: 0 34px 110px rgba(0,0,0,.60);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: linear-gradient(180deg, var(--bg), var(--bg2));
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 22px;
+      background: rgba(10,10,14,0.72);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: -1px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,102,0,0.55), transparent);
+      opacity: 0.55;
+      pointer-events: none;
+    }
+
+    .nav-logo { text-decoration: none; }
+
+    .brand__box {
+      display: inline-flex;
+      gap: 0;
+      align-items: center;
+      font-weight: 1000;
+      letter-spacing: -0.6px;
+      font-size: 20px;
+      color: rgba(255,255,255,0.95);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 12px;
+      padding: 9px 14px;
+      font-family: Inter, system-ui, sans-serif;
+    }
+
+    .brand__box span { color: var(--orange); }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav__links a {
+      font-weight: 900;
+      font-size: 14px;
+      color: rgba(255,255,255,0.88);
+      text-decoration: none;
+      transition: transform 0.15s, opacity 0.15s;
+    }
+
+    .nav__links a:hover { transform: translateY(-1px); }
+
+    .nav__phone {
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.04);
+      font-weight: 900;
+      font-size: 14px;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .nav__burger {
+      display: none;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .nav__burger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: rgba(255,255,255,0.85);
+      margin: 5px 0;
+      border-radius: 2px;
+    }
+
+    /* MOBILE MENU */
+    .mobile-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 998;
+      background: rgba(7,7,10,0.97);
+      backdrop-filter: blur(16px);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+    }
+    .mobile-overlay.is-open { display: flex; }
+    .mobile-overlay a {
+      color: var(--text);
+      font-size: 22px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .mobile-overlay a.cta {
+      background: linear-gradient(135deg, var(--orange), var(--orange2));
+      color: #111 !important;
+      padding: 14px 32px;
+      border-radius: 999px;
+      font-size: 15px;
+    }
+
+    /* BUTTONS */
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 18px;
+      border-radius: 999px;
+      font-weight: 900;
+      font-size: 14px;
+      text-decoration: none;
+      transition: transform 0.16s, box-shadow 0.16s;
+      background: linear-gradient(135deg, var(--orange), var(--orange2));
+      border: 0;
+      box-shadow: rgba(255,102,0,0.22) 0px 18px 60px;
+      color: #111 !important;
+      cursor: pointer;
+      font-family: Inter, system-ui, sans-serif;
+    }
+    .cta:hover { transform: translateY(-2px); box-shadow: rgba(255,102,0,0.3) 0px 24px 72px; }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .btn-ghost:hover { color: var(--text); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 48px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(900px 520px at 18% 10%, rgba(255,102,0,0.16), transparent 62%),
+        radial-gradient(900px 520px at 86% 35%, rgba(255,138,0,0.10), transparent 68%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(72px, 10vw, 140px);
+      line-height: 0.92;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      max-width: 900px;
+      margin-bottom: 36px;
+    }
+
+    .hero h1 em { font-style: normal; color: var(--orange); }
+
+    .hero-sub {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 48px;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    .hero-actions { display: flex; gap: 16px; align-items: center; }
+
+    .hero-stats {
+      position: absolute;
+      top: 50%;
+      right: 48px;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .hero-stat { text-align: right; }
+
+    .hero-stat-num {
+      font-size: 52px;
+      font-weight: 1000;
+      line-height: 1;
+      color: var(--text);
+    }
+
+    .hero-stat-num span { color: var(--orange); }
+
+    .hero-stat-label {
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* SECTIONS */
+    section { padding: 100px 48px; }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: clamp(42px, 5vw, 72px);
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin-bottom: 24px;
+      color: var(--text);
+    }
+
+    .section-intro {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 560px;
+      line-height: 1.75;
+    }
+
+    /* DIVIDER */
+    .divider { height: 1px; background: var(--border); margin: 0 48px; }
+
+    /* WHAT YOU GET */
+    .what-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 64px;
+    }
+
+    .what-item {
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, var(--surface), var(--surface2));
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: 32px 28px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+    }
+
+    .what-item:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255,102,0,0.35);
+      box-shadow: var(--shadowH);
+    }
+
+    .what-num {
+      font-size: 48px;
+      font-weight: 1000;
+      color: var(--border);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .what-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .what-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* PROCESS */
+    .process-section { background: rgba(255,255,255,0.015); }
+
+    .process-steps {
+      margin-top: 64px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .process-step {
+      display: grid;
+      grid-template-columns: 80px 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+      padding: 40px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .process-step:last-child { border-bottom: none; }
+
+    .step-num {
+      font-size: 56px;
+      font-weight: 1000;
+      color: var(--border);
+      line-height: 1;
+    }
+
+    .step-title {
+      font-size: 22px;
+      font-weight: 500;
+      padding-top: 8px;
+      color: var(--text);
+    }
+
+    .step-desc {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.75;
+      padding-top: 8px;
+    }
+
+    /* INCLUDED */
+    .included-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 64px;
+    }
+
+    .included-card {
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, var(--surface), var(--surface2));
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: 36px;
+      transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+    }
+
+    .included-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255,102,0,0.35);
+      box-shadow: var(--shadowH);
+    }
+
+    .included-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    .included-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .included-list li {
+      font-size: 14px;
+      color: var(--muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      line-height: 1.5;
+    }
+
+    .included-list li::before {
+      content: '→';
+      color: var(--orange);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* RESULTS */
+    .results-section { background: rgba(255,255,255,0.015); }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 64px;
+    }
+
+    .result-card {
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, var(--surface), var(--surface2));
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: 48px 40px;
+      transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+    }
+
+    .result-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255,102,0,0.35);
+      box-shadow: var(--shadowH);
+    }
+
+    .result-metric {
+      font-size: 64px;
+      font-weight: 1000;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .result-label {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .result-context {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .result-client {
+      font-size: 11px;
+      color: var(--orange);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 20px;
+    }
+
+    /* FAQ */
+    .faq-list {
+      margin-top: 64px;
+      max-width: 760px;
+    }
+
+    .faq-item { border-bottom: 1px solid var(--border); }
+
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-family: Inter, system-ui, sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      text-align: left;
+      padding: 28px 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .faq-q .icon {
+      color: var(--orange);
+      font-size: 20px;
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+
+    .faq-item.open .faq-q .icon { transform: rotate(45deg); }
+
+    .faq-a {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.75;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+    }
+
+    .faq-item.open .faq-a {
+      max-height: 300px;
+      padding-bottom: 28px;
+    }
+
+    /* CTA */
+    .cta-section {
+      text-align: center;
+      padding: 120px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(255,102,0,0.06) 0%, transparent 70%);
+    }
+
+    .cta-section h2 { max-width: 700px; margin: 0 auto 24px; }
+
+    .cta-section p {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto 48px;
+    }
+
+    .cta-badges {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      margin-top: 48px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--orange);
+      flex-shrink: 0;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer .logo {
+      font-size: 18px;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    footer .logo span { color: var(--orange); }
+
+    .footer-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--text); }
+
+    footer p { font-size: 12px; color: rgba(255,255,255,.3); }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-eyebrow { animation: fadeUp 0.8s ease both; }
+    .hero h1 { animation: fadeUp 0.8s ease both; animation-delay: 0.1s; }
+    .hero-sub { animation: fadeUp 0.8s ease both; animation-delay: 0.2s; }
+    .hero-actions { animation: fadeUp 0.8s ease both; animation-delay: 0.3s; }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .nav__links { display: none; }
+      .nav__burger { display: block; }
+      section { padding: 72px 24px; }
+      .hero { padding: 0 24px 72px; }
+      .hero-stats { display: none; }
+      .what-grid { grid-template-columns: 1fr; }
+      .included-grid { grid-template-columns: 1fr; }
+      .results-grid { grid-template-columns: 1fr; }
+      .process-step { grid-template-columns: 60px 1fr; }
+      .step-desc { grid-column: 2; }
+      .divider { margin: 0 24px; }
+      footer { flex-direction: column; gap: 24px; text-align: center; }
+      .footer-links { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo" aria-label="Holland Digital Home">
+      <span class="brand__box">Holland<span>Digital</span></span>
+    </a>
+    <div class="nav__links">
+      <a href="/web-design">Web Design</a>
+      <a href="/google-ads">Google Ads</a>
+      <a href="/meta-ads">Meta Ads</a>
+      <a href="/landing-pages">Landing Pages</a>
+      <a href="tel:0448359099" class="nav__phone">0448 359 099</a>
+      <a href="#" class="cta js-calendly">BOOK A STRATEGY CALL</a>
+    </div>
+    <button class="nav__burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-overlay" data-mobile>
+    <a href="/">Home</a>
+    <a href="/web-design">Web Design</a>
+    <a href="/google-ads">Google Ads</a>
+    <a href="/meta-ads">Meta Ads</a>
+    <a href="/landing-pages">Landing Pages</a>
+    <a href="/about">About</a>
+    <a href="tel:0448359099">0448 359 099</a>
+    <a href="#" class="cta js-calendly">BOOK A STRATEGY CALL</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <p class="hero-eyebrow">Holland Digital — Melbourne, Australia</p>
+    <h1>Performance Marketing<br>Done <em>Properly.</em></h1>
+    <p class="hero-sub">Holland Digital is a Melbourne-based web design and digital marketing agency founded by Jye Holland. We specialise in conversion-first websites, Google Ads, and Meta Ads — built to generate real, measurable results for Australian businesses.</p>
+    <div class="hero-actions">
+      <a href="#" class="cta js-calendly">BOOK A STRATEGY CALL</a>
+      <a href="#results" class="btn-ghost">SEE RESULTS →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num"><span>3</span>+</div>
+        <div class="hero-stat-label">Years Experience</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num"><span>10</span>+</div>
+        <div class="hero-stat-label">Clients Helped</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num"><span>$250</span>k+</div>
+        <div class="hero-stat-label">Ad Spend Managed</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- WHAT YOU GET -->
+  <section>
+    <p class="section-label">Why Holland Digital</p>
+    <h2>The Agency<br>That Delivers.</h2>
+    <p class="section-intro">Holland Digital was built on a simple principle — close collaboration, transparent communication, and a relentless focus on results. No layers. No handoffs. Just outcomes.</p>
+
+    <div class="what-grid">
+      <div class="what-item">
+        <div class="what-num">01</div>
+        <div class="what-title">Direct, Personal Service</div>
+        <div class="what-desc">You work directly with Jye — the strategist, designer, and media buyer — not an account manager relaying messages.</div>
+      </div>
+      <div class="what-item">
+        <div class="what-num">02</div>
+        <div class="what-title">Local Market Expertise</div>
+        <div class="what-desc">We specialise in helping businesses dominate their local area — whether that's Melbourne, surrounding suburbs, or targeting customers right across Australia.</div>
+      </div>
+      <div class="what-item">
+        <div class="what-num">03</div>
+        <div class="what-title">Fast, Reliable Delivery</div>
+        <div class="what-desc">Most websites launch within 7–14 days. Ad campaigns go live within 48 hours. We move quickly without compromising on quality or precision.</div>
+      </div>
+      <div class="what-item">
+        <div class="what-num">04</div>
+        <div class="what-title">Performance-Led Thinking</div>
+        <div class="what-desc">Every decision — from design to ad copy to budget allocation — is driven by one objective: maximising your return on investment.</div>
+      </div>
+      <div class="what-item">
+        <div class="what-num">05</div>
+        <div class="what-title">Transparent Reporting</div>
+        <div class="what-desc">You receive clear, honest reporting — no vanity metrics, no jargon. Just straightforward data that shows exactly how your investment is performing.</div>
+      </div>
+      <div class="what-item">
+        <div class="what-num">06</div>
+        <div class="what-title">No Lock-In Agreements</div>
+        <div class="what-desc">We operate on performance and trust. There are no lock-in contracts — we retain clients by delivering results, not by binding them to lengthy agreements.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PROCESS -->
+  <section class="process-section">
+    <p class="section-label">How It Works</p>
+    <h2>Launch in<br>7–14 Days.</h2>
+    <p class="section-intro">A tight process that moves fast without cutting corners. You'll know exactly where things are at every step.</p>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <div class="step-title">Strategy Call</div>
+        <div class="step-desc">We map your offer, your audience, and your conversion goals. This shapes every design decision that follows.</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <div class="step-title">Build & Design</div>
+        <div class="step-desc">Wireframes, copy structure, and full build — done in parallel to hit your timeline. One revision round included.</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <div class="step-title">Tracking & QA</div>
+        <div class="step-desc">Every form, event, and pixel is tested before launch. You go live knowing everything works.</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <div class="step-title">Launch & Optimise</div>
+        <div class="step-desc">We don't disappear after launch. Ongoing retainers keep testing, improving, and scaling your site's performance.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- INCLUDED PACKAGES -->
+  <section>
+    <p class="section-label">Service Options</p>
+    <h2>Pick Your<br>Build Type.</h2>
+    <p class="section-intro">Whether you need a full brand website or a razor-sharp landing page, we build for performance — not templates.</p>
+
+    <div class="included-grid">
+      <div class="included-card">
+        <h3>Premium Website Build</h3>
+        <ul class="included-list">
+          <li>Up to 6 custom pages</li>
+          <li>Conversion-first layout & copywriting structure</li>
+          <li>Mobile-first responsive design</li>
+          <li>GA4 + Meta Pixel + event tracking</li>
+          <li>SEO title tags, meta descriptions & schema</li>
+          <li>Speed optimisation — 95+ PageSpeed target</li>
+          <li>Lead capture forms & click-to-call</li>
+          <li>7–14 day delivery</li>
+        </ul>
+      </div>
+      <div class="included-card">
+        <h3>Landing Page + Funnel</h3>
+        <ul class="included-list">
+          <li>Single high-converting landing page</li>
+          <li>Message-match copy for your ad traffic</li>
+          <li>Fast form + click-to-call integration</li>
+          <li>Full conversion tracking setup</li>
+          <li>A/B testing ready structure</li>
+          <li>Aligned with your Meta or Google ads</li>
+          <li>5–7 day delivery</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- RESULTS -->
+  <section class="results-section" id="results">
+    <p class="section-label">Proof</p>
+    <h2>Real Numbers.<br>Real Clients.</h2>
+    <p class="section-intro">Performance speaks louder than claims. Here's what conversion-first design actually delivers.</p>
+
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="result-metric">+38%</div>
+        <div class="result-label">Conversion Rate Increase</div>
+        <div class="result-context">Full site rebuild with conversion architecture and funnel-aligned lead capture system.</div>
+        <div class="result-client">Summit Earthworks</div>
+      </div>
+      <div class="result-card">
+        <div class="result-metric">+64%</div>
+        <div class="result-label">More Leads Per Month</div>
+        <div class="result-context">Structural rebuild plus Meta lead funnel integration and tracking overhaul.</div>
+        <div class="result-client">Summit Earthworks</div>
+      </div>
+      <div class="result-card">
+        <div class="result-metric">1.2s</div>
+        <div class="result-label">Page Load Speed</div>
+        <div class="result-context">Performance build with full asset optimisation and clean, lightweight UI architecture.</div>
+        <div class="result-client">Summit Earthworks</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- FAQ -->
+  <section>
+    <p class="section-label">FAQ</p>
+    <h2>Common<br>Questions.</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">How long does a website build take? <span class="icon">+</span></button>
+        <div class="faq-a">Most builds launch within 7–14 days depending on page count, content readiness, and how fast approvals come through. Landing pages can launch in as little as 5 days.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do I need to provide copy and images? <span class="icon">+</span></button>
+        <div class="faq-a">We structure the copy framework for you and advise on what's needed. You provide the business details, offers, and any existing brand assets. We handle the rest.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can you also run ads to my new website? <span class="icon">+</span></button>
+        <div class="faq-a">Yes — and this is where results compound. We build the site and the paid acquisition system together so everything is aligned: landing pages match ad creative, tracking is set up from day one, and we optimise both weekly.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What platform do you build on? <span class="icon">+</span></button>
+        <div class="faq-a">We build custom — no drag-and-drop page builders. Clean, fast code that you own outright. This means no monthly platform fees and no performance compromises.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What's the investment? <span class="icon">+</span></button>
+        <div class="faq-a">Pricing is scoped to your project. Book a strategy call and we'll give you a clear number within 24 hours. No vague "starting from" ranges — just a straight answer.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <p class="section-label">Get Started</p>
+    <h2>Ready for a Website That Actually Works?</h2>
+    <p>Book a free 30-minute strategy call. We'll audit your current site, identify fast wins, and map out exactly what we'd build.</p>
+    <a href="#" class="cta js-calendly">BOOK A FREE STRATEGY CALL</a>
+    <div class="cta-badges">
+      <span class="badge">Free audit included</span>
+      <span class="badge">No lock-in contracts</span>
+      <span class="badge">7–14 day launch</span>
+      <span class="badge">Australia-wide</span>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">© <span id="y"></span> Holland Digital</div>
+    <ul class="footer-links">
+      <li><a href="/web-design">Web Design</a></li>
+      <li><a href="/google-ads">Google Ads</a></li>
+      <li><a href="/meta-ads">Meta Ads</a></li>
+      <li><a href="/landing-pages">Landing Pages</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    const burger = document.querySelector('.nav__burger');
+    const mobile = document.querySelector('[data-mobile]');
+    if (burger && mobile) {
+      burger.addEventListener('click', () => {
+        const open = mobile.classList.toggle('is-open');
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      mobile.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          mobile.classList.remove('is-open');
+          burger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    const CALENDLY_URL = 'https://calendly.com/holland-digital-ywaf/30min';
+
+    function loadCalendly() {
+      return new Promise((resolve) => {
+        if (window.Calendly) return resolve(true);
+        const s = document.createElement('script');
+        s.src = 'https://assets.calendly.com/assets/external/widget.js';
+        s.async = true;
+        s.onload = () => resolve(true);
+        s.onerror = () => resolve(false);
+        document.body.appendChild(s);
+      });
+    }
+
+    document.querySelectorAll('.js-calendly').forEach((btn) => {
+      btn.addEventListener('click', async (e) => {
+        e.preventDefault();
+        const ok = await loadCalendly();
+        if (ok && window.Calendly) {
+          window.Calendly.initPopupWidget({ url: CALENDLY_URL });
+        } else {
+          window.open(CALENDLY_URL, '_blank', 'noopener');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
