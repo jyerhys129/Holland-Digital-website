@@ -642,7 +642,7 @@ a:hover{ color:#fff; }
   filter: brightness(1.4) drop-shadow(0 4px 16px rgba(0,0,0,.4));
 }
 .client-card img.logo--dark-bg {
-  mix-blend-mode: screen;
+  mix-blend-mode: normal;
 }
 .client-placeholder {
   font-weight: 1000;
