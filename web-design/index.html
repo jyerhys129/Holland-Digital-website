@@ -17,16 +17,21 @@
   <!-- Canonical -->
   <link rel="canonical" href="https://www.holland-digital.com/web-design">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --font-body: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
       --bg: #0b0b0f;
       --bg2: #07070a;
       --text: rgba(255,255,255,.92);
@@ -46,7 +51,7 @@
     body {
       background: linear-gradient(180deg, var(--bg), var(--bg2));
       color: var(--text);
-      font-family: var(--font-body);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
       font-weight: 400;
       line-height: 1.6;
       overflow-x: hidden;
@@ -79,14 +84,10 @@
       pointer-events: none;
     }
 
-    /* LOGO */
-    .brand {
-      text-decoration: none;
-    }
+    .nav-logo { text-decoration: none; }
 
     .brand__box {
       display: inline-flex;
-      gap: 0;
       align-items: center;
       font-weight: 1000;
       letter-spacing: -0.6px;
@@ -95,12 +96,10 @@
       border: 1px solid rgba(255,255,255,0.18);
       border-radius: 12px;
       padding: 9px 14px;
-      font-family: var(--font-body);
     }
 
     .brand__box span { color: var(--orange); }
 
-    /* NAV LINKS */
     .nav__links {
       display: flex;
       align-items: center;
@@ -112,13 +111,10 @@
       font-size: 14px;
       color: rgba(255,255,255,0.88);
       text-decoration: none;
-      text-transform: none;
-      letter-spacing: normal;
-      opacity: 1;
-      transition: transform 0.15s, opacity 0.15s;
+      transition: transform 0.15s;
     }
 
-    .nav__links a:hover { transform: translateY(-1px); opacity: 1; }
+    .nav__links a:hover { transform: translateY(-1px); }
 
     .nav__phone {
       padding: 10px 12px;
@@ -130,7 +126,6 @@
       color: rgba(255,255,255,0.88);
     }
 
-    /* HAMBURGER */
     .nav__burger {
       display: none;
       background: transparent;
@@ -148,51 +143,40 @@
       border-radius: 2px;
     }
 
-    /* Mobile menu */
-    .mobile{
+    /* MOBILE MENU */
+    .mobile {
+      display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,.55);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      display:none;
       z-index: 998;
+      background: rgba(7,7,10,0.97);
+      backdrop-filter: blur(16px);
     }
-    .mobile.is-open{ display:block; }
-    .mobile__panel{
-      position:absolute;
-      right: 14px;
-      top: 68px;
-      width: min(340px, calc(100% - 28px));
-      padding: 16px;
-      border-radius: 18px;
-      background: linear-gradient(180deg, rgba(20,20,26,.96), rgba(10,10,14,.96));
-      border: 1px solid rgba(255,255,255,.12);
-      box-shadow: var(--shadow);
-      display:flex;
-      flex-direction:column;
-      gap: 10px;
+    .mobile.is-open { display: block; }
+    .mobile__panel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      gap: 28px;
     }
-    .mobile__panel a{
-      padding: 12px 12px;
-      border-radius: 12px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.10);
-      color: rgba(255,255,255,0.88);
-      font-weight: 900;
-      font-size: 14px;
+    .mobile__panel a {
+      color: var(--text);
+      font-size: 22px;
+      font-weight: 800;
       text-decoration: none;
     }
-    .mobile__panel a.cta{
-      justify-content: center;
-      text-align: center;
+    .mobile__panel a.cta {
       background: linear-gradient(135deg, var(--orange), var(--orange2));
       color: #111 !important;
-      border: 0;
+      padding: 14px 32px;
+      border-radius: 999px;
+      font-size: 15px;
     }
 
     /* BUTTONS */
-    .btn-primary, .cta {
+    .cta {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -201,49 +185,29 @@
       border-radius: 999px;
       font-weight: 900;
       font-size: 14px;
-      letter-spacing: normal;
-      text-transform: none;
       text-decoration: none;
       transition: transform 0.16s, box-shadow 0.16s;
-      position: relative;
-      overflow: hidden;
       background: linear-gradient(135deg, var(--orange), var(--orange2));
       border: 0;
       box-shadow: rgba(255,102,0,0.22) 0px 18px 60px;
       color: #111 !important;
       cursor: pointer;
-      font-family: var(--font-body);
+      font-family: Inter, system-ui, sans-serif;
     }
-
-    .btn-primary:hover, .cta:hover {
-      transform: translateY(-2px);
-      box-shadow: rgba(255,102,0,0.3) 0px 24px 72px;
-    }
+    .cta:hover { transform: translateY(-2px); box-shadow: rgba(255,102,0,0.3) 0px 24px 72px; }
 
     .btn-ghost {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 13px 18px;
-      border-radius: 999px;
-      font-weight: 900;
-      font-size: 14px;
-      letter-spacing: normal;
-      text-transform: none;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
       text-decoration: none;
-      transition: transform 0.16s, box-shadow 0.16s, border-color 0.16s;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.14);
-      color: rgba(255,255,255,0.92);
-      box-shadow: rgba(0,0,0,0.35) 0px 18px 55px;
-      font-family: var(--font-body);
+      transition: color 0.2s;
     }
-
-    .btn-ghost:hover {
-      transform: translateY(-2px);
-      border-color: rgba(255,102,0,0.25);
-    }
+    .btn-ghost:hover { color: var(--text); }
 
     /* HERO */
     .hero {
@@ -275,7 +239,6 @@
     }
 
     .hero h1 {
-      font-family: var(--font-body);
       font-size: clamp(72px, 10vw, 140px);
       line-height: 0.92;
       letter-spacing: 0.01em;
@@ -284,10 +247,7 @@
       margin-bottom: 36px;
     }
 
-    .hero h1 em {
-      font-style: normal;
-      color: var(--orange);
-    }
+    .hero h1 em { font-style: normal; color: var(--orange); }
 
     .hero-sub {
       font-size: 18px;
@@ -298,11 +258,7 @@
       line-height: 1.7;
     }
 
-    .hero-actions {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-    }
+    .hero-actions { display: flex; gap: 16px; align-items: center; }
 
     .hero-stats {
       position: absolute;
@@ -317,7 +273,6 @@
     .hero-stat { text-align: right; }
 
     .hero-stat-num {
-      font-family: var(--font-body);
       font-size: 52px;
       font-weight: 1000;
       line-height: 1;
@@ -347,7 +302,6 @@
     }
 
     h2 {
-      font-family: var(--font-body);
       font-size: clamp(42px, 5vw, 72px);
       line-height: 1;
       text-transform: uppercase;
@@ -364,11 +318,7 @@
     }
 
     /* DIVIDER */
-    .divider {
-      height: 1px;
-      background: var(--border);
-      margin: 0 48px;
-    }
+    .divider { height: 1px; background: var(--border); margin: 0 48px; }
 
     /* WHAT YOU GET */
     .what-grid {
@@ -389,29 +339,13 @@
       transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
     }
 
-    .what-item::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      padding: 1px;
-      background: linear-gradient(135deg, rgba(255,102,0,0.55), rgba(255,255,255,0.1), rgba(255,138,0,0.45));
-      mask: linear-gradient(#000 0, #000 0) content-box exclude, linear-gradient(#000 0, #000 0);
-      opacity: 0.18;
-      pointer-events: none;
-      transition: opacity 0.18s;
-    }
-
     .what-item:hover {
       transform: translateY(-6px);
       border-color: rgba(255,102,0,0.35);
       box-shadow: var(--shadowH);
     }
 
-    .what-item:hover::after { opacity: 0.45; }
-
     .what-num {
-      font-family: var(--font-body);
       font-size: 48px;
       font-weight: 1000;
       color: var(--border);
@@ -439,7 +373,6 @@
       margin-top: 64px;
       display: flex;
       flex-direction: column;
-      gap: 0;
     }
 
     .process-step {
@@ -454,7 +387,6 @@
     .process-step:last-child { border-bottom: none; }
 
     .step-num {
-      font-family: var(--font-body);
       font-size: 56px;
       font-weight: 1000;
       color: var(--border);
@@ -489,22 +421,7 @@
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
       padding: 36px;
-      position: relative;
-      overflow: hidden;
       transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
-    }
-
-    .included-card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      padding: 1px;
-      background: linear-gradient(135deg, rgba(255,102,0,0.55), rgba(255,255,255,0.1), rgba(255,138,0,0.45));
-      mask: linear-gradient(#000 0, #000 0) content-box exclude, linear-gradient(#000 0, #000 0);
-      opacity: 0.18;
-      pointer-events: none;
-      transition: opacity 0.18s;
     }
 
     .included-card:hover {
@@ -512,8 +429,6 @@
       border-color: rgba(255,102,0,0.35);
       box-shadow: var(--shadowH);
     }
-
-    .included-card:hover::after { opacity: 0.45; }
 
     .included-card h3 {
       font-size: 18px;
@@ -561,22 +476,7 @@
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
       padding: 48px 40px;
-      position: relative;
-      overflow: hidden;
       transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
-    }
-
-    .result-card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      padding: 1px;
-      background: linear-gradient(135deg, rgba(255,102,0,0.55), rgba(255,255,255,0.1), rgba(255,138,0,0.45));
-      mask: linear-gradient(#000 0, #000 0) content-box exclude, linear-gradient(#000 0, #000 0);
-      opacity: 0.18;
-      pointer-events: none;
-      transition: opacity 0.18s;
     }
 
     .result-card:hover {
@@ -585,10 +485,7 @@
       box-shadow: var(--shadowH);
     }
 
-    .result-card:hover::after { opacity: 0.45; }
-
     .result-metric {
-      font-family: var(--font-body);
       font-size: 64px;
       font-weight: 1000;
       color: var(--orange);
@@ -623,16 +520,14 @@
       max-width: 760px;
     }
 
-    .faq-item {
-      border-bottom: 1px solid var(--border);
-    }
+    .faq-item { border-bottom: 1px solid var(--border); }
 
     .faq-q {
       width: 100%;
       background: none;
       border: none;
       color: var(--text);
-      font-family: var(--font-body);
+      font-family: Inter, system-ui, sans-serif;
       font-size: 16px;
       font-weight: 500;
       text-align: left;
@@ -682,10 +577,7 @@
       background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(255,102,0,0.06) 0%, transparent 70%);
     }
 
-    .cta-section h2 {
-      max-width: 700px;
-      margin: 0 auto 24px;
-    }
+    .cta-section h2 { max-width: 700px; margin: 0 auto 24px; }
 
     .cta-section p {
       font-size: 17px;
@@ -730,16 +622,6 @@
       align-items: center;
     }
 
-    footer .logo {
-      font-family: var(--font-body);
-      font-size: 18px;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-      text-decoration: none;
-    }
-
-    footer .logo span { color: var(--orange); }
-
     .footer-links {
       display: flex;
       gap: 32px;
@@ -755,10 +637,7 @@
 
     .footer-links a:hover { color: var(--text); }
 
-    footer p {
-      font-size: 12px;
-      color: rgba(255,255,255,.3);
-    }
+    footer p { font-size: 12px; color: rgba(255,255,255,.3); }
 
     /* ANIMATIONS */
     @keyframes fadeUp {
@@ -766,20 +645,13 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    .hero-eyebrow,
-    .hero h1,
-    .hero-sub,
-    .hero-actions {
-      animation: fadeUp 0.8s ease both;
-    }
-
-    .hero h1 { animation-delay: 0.1s; }
-    .hero-sub { animation-delay: 0.2s; }
-    .hero-actions { animation-delay: 0.3s; }
+    .hero-eyebrow { animation: fadeUp 0.8s ease both; }
+    .hero h1 { animation: fadeUp 0.8s ease both; animation-delay: 0.1s; }
+    .hero-sub { animation: fadeUp 0.8s ease both; animation-delay: 0.2s; }
+    .hero-actions { animation: fadeUp 0.8s ease both; animation-delay: 0.3s; }
 
     /* MOBILE */
     @media (max-width: 768px) {
-      nav { padding: 16px 24px; }
       .nav__links { display: none; }
       .nav__burger { display: block; }
       section { padding: 72px 24px; }
@@ -799,20 +671,19 @@
 <body>
 
   <!-- NAV -->
-  <nav class="nav">
-    <a class="brand" href="/" aria-label="Holland Digital Home">
+  <nav>
+    <a href="/" class="nav-logo" aria-label="Holland Digital Home">
       <span class="brand__box">Holland<span>Digital</span></span>
     </a>
-
     <div class="nav__links">
-      <a href="/">Home</a>
-      <a href="/#services">Services</a>
-      <a href="/#results">Results</a>
-      <a href="/#process">Process</a>
+      <a href="/web-design">Web Design</a>
+      <a href="/google-ads">Google Ads</a>
+      <a href="/meta-ads">Meta Ads</a>
+      <a href="/landing-pages">Landing Pages</a>
+      <a href="/about">About</a>
       <a href="tel:0448359099" class="nav__phone">0448 359 099</a>
       <a href="#" class="cta js-calendly">BOOK A STRATEGY CALL</a>
     </div>
-
     <button class="nav__burger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -821,11 +692,11 @@
   <!-- MOBILE MENU -->
   <div class="mobile" data-mobile>
     <div class="mobile__panel">
-      <a href="/">Home</a>
-      <a href="/#services">Services</a>
-      <a href="/#results">Results</a>
-      <a href="/#process">Process</a>
-      <a href="/#faq">FAQ</a>
+      <a href="/web-design">Web Design</a>
+      <a href="/google-ads">Google Ads</a>
+      <a href="/meta-ads">Meta Ads</a>
+      <a href="/landing-pages">Landing Pages</a>
+      <a href="/about">About</a>
       <a href="tel:0448359099">Call: 0448 359 099</a>
       <a href="#" class="cta js-calendly">BOOK A STRATEGY CALL</a>
     </div>
@@ -839,7 +710,7 @@
     <p class="hero-sub">Not just pretty — performance-engineered. Every Holland Digital website is built around one goal: turning visitors into leads, enquiries, and sales.</p>
     <div class="hero-actions">
       <a href="#" class="cta js-calendly">BOOK A STRATEGY CALL</a>
-      <a href="#results" class="btn-ghost">SEE RESULTS</a>
+      <a href="#results" class="btn-ghost">SEE RESULTS →</a>
     </div>
     <div class="hero-stats">
       <div class="hero-stat">
@@ -1001,29 +872,29 @@
   <div class="divider"></div>
 
   <!-- FAQ -->
-  <section id="faq">
+  <section>
     <p class="section-label">FAQ</p>
     <h2>Common<br>Questions.</h2>
 
     <div class="faq-list">
       <div class="faq-item">
-        <button type="button" class="faq-q">How long does a website build take? <span class="icon">+</span></button>
+        <button class="faq-q">How long does a website build take? <span class="icon">+</span></button>
         <div class="faq-a">Most builds launch within 7–14 days depending on page count, content readiness, and how fast approvals come through. Landing pages can launch in as little as 5 days.</div>
       </div>
       <div class="faq-item">
-        <button type="button" class="faq-q">Do I need to provide copy and images? <span class="icon">+</span></button>
+        <button class="faq-q">Do I need to provide copy and images? <span class="icon">+</span></button>
         <div class="faq-a">We structure the copy framework for you and advise on what's needed. You provide the business details, offers, and any existing brand assets. We handle the rest.</div>
       </div>
       <div class="faq-item">
-        <button type="button" class="faq-q">Can you also run ads to my new website? <span class="icon">+</span></button>
+        <button class="faq-q">Can you also run ads to my new website? <span class="icon">+</span></button>
         <div class="faq-a">Yes — and this is where results compound. We build the site and the paid acquisition system together so everything is aligned: landing pages match ad creative, tracking is set up from day one, and we optimise both weekly.</div>
       </div>
       <div class="faq-item">
-        <button type="button" class="faq-q">What platform do you build on? <span class="icon">+</span></button>
+        <button class="faq-q">What platform do you build on? <span class="icon">+</span></button>
         <div class="faq-a">We build custom — no drag-and-drop page builders. Clean, fast code that you own outright. This means no monthly platform fees and no performance compromises.</div>
       </div>
       <div class="faq-item">
-        <button type="button" class="faq-q">What's the investment? <span class="icon">+</span></button>
+        <button class="faq-q">What's the investment? <span class="icon">+</span></button>
         <div class="faq-a">Pricing is scoped to your project. Book a strategy call and we'll give you a clear number within 24 hours. No vague "starting from" ranges — just a straight answer.</div>
       </div>
     </div>
@@ -1048,11 +919,10 @@
     <div class="footer-left">© <span id="y"></span> Holland Digital</div>
     <ul class="footer-links">
       <li><a href="/web-design">Web Design</a></li>
-      <li><a href="/landing-pages">Landing Pages</a></li>
-      <li><a href="/meta-ads">Meta Ads</a></li>
       <li><a href="/google-ads">Google Ads</a></li>
-      <li><a href="/#services">Services</a></li>
-      <li><a href="/#results">Results</a></li>
+      <li><a href="/meta-ads">Meta Ads</a></li>
+      <li><a href="/landing-pages">Landing Pages</a></li>
+      <li><a href="/about">About</a></li>
       <li><a href="/#contact">Contact</a></li>
     </ul>
   </footer>
@@ -1095,14 +965,12 @@
     function loadCalendly() {
       return new Promise((resolve) => {
         if (window.Calendly) return resolve(true);
-
         const existing = document.querySelector('script[data-calendly="true"]');
         if (existing) {
           existing.addEventListener('load', () => resolve(true));
           existing.addEventListener('error', () => resolve(false));
           return;
         }
-
         const s = document.createElement('script');
         s.src = 'https://assets.calendly.com/assets/external/widget.js';
         s.async = true;
@@ -1116,7 +984,6 @@
     document.querySelectorAll('.js-calendly').forEach((btn) => {
       btn.addEventListener('click', async (e) => {
         e.preventDefault();
-
         const ok = await loadCalendly();
         if (ok && window.Calendly) {
           window.Calendly.initPopupWidget({ url: CALENDLY_URL });

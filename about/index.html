@@ -88,7 +88,6 @@
 
     .brand__box {
       display: inline-flex;
-      gap: 0;
       align-items: center;
       font-weight: 1000;
       letter-spacing: -0.6px;
@@ -97,7 +96,6 @@
       border: 1px solid rgba(255,255,255,0.18);
       border-radius: 12px;
       padding: 9px 14px;
-      font-family: Inter, system-ui, sans-serif;
     }
 
     .brand__box span { color: var(--orange); }
@@ -113,7 +111,7 @@
       font-size: 14px;
       color: rgba(255,255,255,0.88);
       text-decoration: none;
-      transition: transform 0.15s, opacity 0.15s;
+      transition: transform 0.15s;
     }
 
     .nav__links a:hover { transform: translateY(-1px); }
@@ -146,26 +144,30 @@
     }
 
     /* MOBILE MENU */
-    .mobile-overlay {
+    .mobile {
       display: none;
       position: fixed;
       inset: 0;
       z-index: 998;
       background: rgba(7,7,10,0.97);
       backdrop-filter: blur(16px);
+    }
+    .mobile.is-open { display: block; }
+    .mobile__panel {
+      display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      height: 100%;
       gap: 28px;
     }
-    .mobile-overlay.is-open { display: flex; }
-    .mobile-overlay a {
+    .mobile__panel a {
       color: var(--text);
       font-size: 22px;
       font-weight: 800;
       text-decoration: none;
     }
-    .mobile-overlay a.cta {
+    .mobile__panel a.cta {
       background: linear-gradient(135deg, var(--orange), var(--orange2));
       color: #111 !important;
       padding: 14px 32px;
@@ -332,8 +334,6 @@
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
       padding: 32px 28px;
-      position: relative;
-      overflow: hidden;
       transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
     }
 
@@ -620,15 +620,6 @@
       align-items: center;
     }
 
-    footer .logo {
-      font-size: 18px;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-      text-decoration: none;
-    }
-
-    footer .logo span { color: var(--orange); }
-
     .footer-links {
       display: flex;
       gap: 32px;
@@ -643,8 +634,6 @@
     }
 
     .footer-links a:hover { color: var(--text); }
-
-    footer p { font-size: 12px; color: rgba(255,255,255,.3); }
 
     /* ANIMATIONS */
     @keyframes fadeUp {
@@ -687,6 +676,7 @@
       <a href="/google-ads">Google Ads</a>
       <a href="/meta-ads">Meta Ads</a>
       <a href="/landing-pages">Landing Pages</a>
+      <a href="/about">About</a>
       <a href="tel:0448359099" class="nav__phone">0448 359 099</a>
       <a href="#" class="cta js-calendly">BOOK A STRATEGY CALL</a>
     </div>
@@ -696,15 +686,16 @@
   </nav>
 
   <!-- MOBILE MENU -->
-  <div class="mobile-overlay" data-mobile>
-    <a href="/">Home</a>
-    <a href="/web-design">Web Design</a>
-    <a href="/google-ads">Google Ads</a>
-    <a href="/meta-ads">Meta Ads</a>
-    <a href="/landing-pages">Landing Pages</a>
-    <a href="/about">About</a>
-    <a href="tel:0448359099">0448 359 099</a>
-    <a href="#" class="cta js-calendly">BOOK A STRATEGY CALL</a>
+  <div class="mobile" data-mobile>
+    <div class="mobile__panel">
+      <a href="/web-design">Web Design</a>
+      <a href="/google-ads">Google Ads</a>
+      <a href="/meta-ads">Meta Ads</a>
+      <a href="/landing-pages">Landing Pages</a>
+      <a href="/about">About</a>
+      <a href="tel:0448359099">Call: 0448 359 099</a>
+      <a href="#" class="cta js-calendly">BOOK A STRATEGY CALL</a>
+    </div>
   </div>
 
   <!-- HERO -->
@@ -735,7 +726,7 @@
 
   <div class="divider"></div>
 
-  <!-- WHAT YOU GET -->
+  <!-- WHY HOLLAND DIGITAL -->
   <section>
     <p class="section-label">Why Holland Digital</p>
     <h2>The Agency<br>That Delivers.</h2>
@@ -809,7 +800,7 @@
 
   <div class="divider"></div>
 
-  <!-- INCLUDED PACKAGES -->
+  <!-- SERVICE OPTIONS -->
   <section>
     <p class="section-label">Service Options</p>
     <h2>Pick Your<br>Build Type.</h2>
@@ -951,6 +942,12 @@
         const open = mobile.classList.toggle('is-open');
         burger.setAttribute('aria-expanded', open ? 'true' : 'false');
       });
+      mobile.addEventListener('click', (e) => {
+        if (e.target === mobile) {
+          mobile.classList.remove('is-open');
+          burger.setAttribute('aria-expanded', 'false');
+        }
+      });
       mobile.querySelectorAll('a').forEach(a => {
         a.addEventListener('click', () => {
           mobile.classList.remove('is-open');
@@ -964,9 +961,16 @@
     function loadCalendly() {
       return new Promise((resolve) => {
         if (window.Calendly) return resolve(true);
+        const existing = document.querySelector('script[data-calendly="true"]');
+        if (existing) {
+          existing.addEventListener('load', () => resolve(true));
+          existing.addEventListener('error', () => resolve(false));
+          return;
+        }
         const s = document.createElement('script');
         s.src = 'https://assets.calendly.com/assets/external/widget.js';
         s.async = true;
+        s.dataset.calendly = 'true';
         s.onload = () => resolve(true);
         s.onerror = () => resolve(false);
         document.body.appendChild(s);
