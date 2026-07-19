@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,12 +16,26 @@
 
   <!-- Canonical -->
   <link rel="canonical" href="https://www.holland-digital.com/web-design">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="geo.region" content="AU-VIC">
+  <meta name="geo.placename" content="Melbourne">
+  <link rel="alternate" hreflang="en-AU" href="https://www.holland-digital.com/web-design">
+  <meta property="og:site_name" content="Holland Digital">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:image" content="https://www.holland-digital.com/android-chrome-512x512.png">
+  <meta property="og:image:alt" content="Holland Digital — Web Design Agency Melbourne">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Web Design Agency Melbourne | Holland Digital">
+  <meta name="twitter:description" content="Conversion-first websites for Australian businesses. Fast 7–14 day launches, mobile-optimised and built to generate leads.">
+  <meta name="twitter:image" content="https://www.holland-digital.com/android-chrome-512x512.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <meta name="theme-color" content="#0b0b0f">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -718,24 +732,44 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Holland Digital",
-    "description": "Melbourne-based web design and digital marketing agency specialising in conversion-first websites, Google Ads and Meta Ads for Australian businesses.",
-    "url": "https://www.holland-digital.com",
-    "telephone": "+61448359099",
-    "email": "jye@holland-digital.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Melbourne",
-      "addressRegion": "VIC",
-      "addressCountry": "AU"
-    },
-    "areaServed": { "@type": "Country", "name": "Australia" },
-    "serviceType": ["Web Design", "Google Ads Management", "Meta Ads Management", "Landing Page Design"],
-    "priceRange": "$$",
-    "sameAs": [
-      "https://www.instagram.com/hollanddigital_",
-      "https://www.facebook.com/profile.php?id=61588367780540"
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.holland-digital.com/web-design#webpage",
+        "url": "https://www.holland-digital.com/web-design",
+        "name": "Web Design Agency Melbourne | Holland Digital",
+        "description": "Conversion-first websites for Australian businesses. Fast 7–14 day launches, mobile-optimised and built to generate leads.",
+        "isPartOf": { "@id": "https://www.holland-digital.com/#website" },
+        "about": { "@id": "https://www.holland-digital.com/web-design#service" },
+        "inLanguage": "en-AU"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.holland-digital.com/web-design#service",
+        "name": "Web Design Melbourne",
+        "serviceType": "Web Design",
+        "provider": { "@id": "https://www.holland-digital.com/#organization" },
+        "areaServed": { "@type": "Country", "name": "Australia" },
+        "description": "Conversion-first website design for Australian businesses. Custom builds, mobile-optimised, tracking installed. Typical launch in 7–14 days.",
+        "url": "https://www.holland-digital.com/web-design"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.holland-digital.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Web Design", "item": "https://www.holland-digital.com/web-design" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "How long does a website build take?", "acceptedAnswer": { "@type": "Answer", "text": "Most builds launch within 7–14 days depending on page count, content readiness, and how fast approvals come through. Landing pages can launch in as little as 5 days." } },
+          { "@type": "Question", "name": "Do I need to provide copy and images?", "acceptedAnswer": { "@type": "Answer", "text": "We structure the copy framework for you and advise on what's needed. You provide the business details, offers, and any existing brand assets. We handle the rest." } },
+          { "@type": "Question", "name": "Can you also run ads to my new website?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — we build the site and the paid acquisition system together so everything is aligned: landing pages match ad creative, tracking is set up from day one, and we optimise both weekly." } },
+          { "@type": "Question", "name": "What platform do you build on?", "acceptedAnswer": { "@type": "Answer", "text": "We build custom — no drag-and-drop page builders. Clean, fast code that you own outright. No monthly platform fees and no performance compromises." } },
+          { "@type": "Question", "name": "What's the investment?", "acceptedAnswer": { "@type": "Answer", "text": "Pricing is scoped to your project. Book a strategy call and we'll give you a clear number within 24 hours." } }
+        ]
+      }
     ]
   }
   </script>

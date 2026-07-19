@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,12 +16,26 @@
 
   <!-- Canonical -->
   <link rel="canonical" href="https://www.holland-digital.com/landing-pages">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="geo.region" content="AU-VIC">
+  <meta name="geo.placename" content="Melbourne">
+  <link rel="alternate" hreflang="en-AU" href="https://www.holland-digital.com/landing-pages">
+  <meta property="og:site_name" content="Holland Digital">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:image" content="https://www.holland-digital.com/android-chrome-512x512.png">
+  <meta property="og:image:alt" content="Holland Digital — Landing Page Design Australia">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Landing Page Design Australia | Holland Digital">
+  <meta name="twitter:description" content="High-converting landing pages for Australian businesses. Message-matched, fast-loading and built to turn ad traffic into leads.">
+  <meta name="twitter:image" content="https://www.holland-digital.com/android-chrome-512x512.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <meta name="theme-color" content="#0b0b0f">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -718,24 +732,44 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Holland Digital",
-    "description": "Melbourne-based web design and digital marketing agency specialising in conversion-first websites, Google Ads and Meta Ads for Australian businesses.",
-    "url": "https://www.holland-digital.com",
-    "telephone": "+61448359099",
-    "email": "jye@holland-digital.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Melbourne",
-      "addressRegion": "VIC",
-      "addressCountry": "AU"
-    },
-    "areaServed": { "@type": "Country", "name": "Australia" },
-    "serviceType": ["Web Design", "Google Ads Management", "Meta Ads Management", "Landing Page Design"],
-    "priceRange": "$$",
-    "sameAs": [
-      "https://www.instagram.com/hollanddigital_",
-      "https://www.facebook.com/profile.php?id=61588367780540"
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.holland-digital.com/landing-pages#webpage",
+        "url": "https://www.holland-digital.com/landing-pages",
+        "name": "Landing Page Design Australia | Holland Digital",
+        "description": "High-converting landing pages for Australian businesses. Message-matched, fast-loading and built to turn ad traffic into leads.",
+        "isPartOf": { "@id": "https://www.holland-digital.com/#website" },
+        "about": { "@id": "https://www.holland-digital.com/landing-pages#service" },
+        "inLanguage": "en-AU"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.holland-digital.com/landing-pages#service",
+        "name": "Landing Page Design Australia",
+        "serviceType": "Landing Page Design",
+        "provider": { "@id": "https://www.holland-digital.com/#organization" },
+        "areaServed": { "@type": "Country", "name": "Australia" },
+        "description": "High-converting landing pages for paid traffic. Message-matched to ad creative, fast-loading, custom code. Live in 5–10 days.",
+        "url": "https://www.holland-digital.com/landing-pages"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.holland-digital.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Landing Pages", "item": "https://www.holland-digital.com/landing-pages" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "How fast can you build a landing page?", "acceptedAnswer": { "@type": "Answer", "text": "Most single landing pages go live within 5–7 days. Multi-step funnels take 7–10 days." } },
+          { "@type": "Question", "name": "Do I need to write the copy myself?", "acceptedAnswer": { "@type": "Answer", "text": "No. We write the copy based on your offer and audience, matched to your ad creative." } },
+          { "@type": "Question", "name": "Can you run the ads too?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — we build the landing page and manage Meta or Google ads together for aligned copy, creative, and page." } },
+          { "@type": "Question", "name": "Do you use page builders like Unbounce or Webflow?", "acceptedAnswer": { "@type": "Answer", "text": "No. We build custom — clean, fast code you own outright with no monthly platform fees." } },
+          { "@type": "Question", "name": "What does a landing page cost?", "acceptedAnswer": { "@type": "Answer", "text": "Pricing depends on complexity. Book a strategy call for a clear number within 24 hours." } }
+        ]
+      }
     ]
   }
   </script>

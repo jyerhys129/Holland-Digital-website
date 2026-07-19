@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,12 +16,26 @@
 
   <!-- Canonical -->
   <link rel="canonical" href="https://www.holland-digital.com/meta-ads">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="geo.region" content="AU-VIC">
+  <meta name="geo.placename" content="Melbourne">
+  <link rel="alternate" hreflang="en-AU" href="https://www.holland-digital.com/meta-ads">
+  <meta property="og:site_name" content="Holland Digital">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:image" content="https://www.holland-digital.com/android-chrome-512x512.png">
+  <meta property="og:image:alt" content="Holland Digital — Meta Ads Management Australia">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Meta Ads Management Australia | Holland Digital">
+  <meta name="twitter:description" content="Facebook &amp; Instagram ads built to generate leads and scale revenue. Creative testing, retargeting and weekly optimisation.">
+  <meta name="twitter:image" content="https://www.holland-digital.com/android-chrome-512x512.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <meta name="theme-color" content="#0b0b0f">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -718,24 +732,44 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Holland Digital",
-    "description": "Melbourne-based web design and digital marketing agency specialising in conversion-first websites, Google Ads and Meta Ads for Australian businesses.",
-    "url": "https://www.holland-digital.com",
-    "telephone": "+61448359099",
-    "email": "jye@holland-digital.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Melbourne",
-      "addressRegion": "VIC",
-      "addressCountry": "AU"
-    },
-    "areaServed": { "@type": "Country", "name": "Australia" },
-    "serviceType": ["Web Design", "Google Ads Management", "Meta Ads Management", "Landing Page Design"],
-    "priceRange": "$$",
-    "sameAs": [
-      "https://www.instagram.com/hollanddigital_",
-      "https://www.facebook.com/profile.php?id=61588367780540"
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.holland-digital.com/meta-ads#webpage",
+        "url": "https://www.holland-digital.com/meta-ads",
+        "name": "Meta Ads Management Australia | Holland Digital",
+        "description": "Facebook and Instagram ads built to generate leads and scale revenue. Creative testing, retargeting and weekly optimisation.",
+        "isPartOf": { "@id": "https://www.holland-digital.com/#website" },
+        "about": { "@id": "https://www.holland-digital.com/meta-ads#service" },
+        "inLanguage": "en-AU"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.holland-digital.com/meta-ads#service",
+        "name": "Meta Ads Management Australia",
+        "serviceType": "Meta Ads Management",
+        "provider": { "@id": "https://www.holland-digital.com/#organization" },
+        "areaServed": { "@type": "Country", "name": "Australia" },
+        "description": "Facebook and Instagram ad management. Full-funnel campaigns, creative testing, retargeting, Pixel and Conversions API setup. Live within 7 days.",
+        "url": "https://www.holland-digital.com/meta-ads"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.holland-digital.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Meta Ads", "item": "https://www.holland-digital.com/meta-ads" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "How quickly can my Meta campaigns go live?", "acceptedAnswer": { "@type": "Answer", "text": "Most campaigns are live within 7 days of the strategy call — pixel setup, creative brief, campaign build and review all happen in that window." } },
+          { "@type": "Question", "name": "What's the minimum ad budget you recommend?", "acceptedAnswer": { "@type": "Answer", "text": "We recommend a minimum of $1,500–$2,000/month in ad spend for Meta to optimise effectively." } },
+          { "@type": "Question", "name": "Do you also create the ad creative?", "acceptedAnswer": { "@type": "Answer", "text": "We write all ad copy and creative briefs. For static graphics and video we work with your assets or brief our creative studio." } },
+          { "@type": "Question", "name": "Can you take over an existing Meta Ads account?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We audit pixel health, campaign structure, and creative performance — then rebuild from there." } },
+          { "@type": "Question", "name": "What does management cost?", "acceptedAnswer": { "@type": "Answer", "text": "Management fees are scoped to your account size and goals. Book a strategy call for a clear number within 24 hours." } }
+        ]
+      }
     ]
   }
   </script>

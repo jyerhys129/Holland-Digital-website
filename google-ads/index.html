@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,12 +16,26 @@
 
   <!-- Canonical -->
   <link rel="canonical" href="https://www.holland-digital.com/google-ads">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="geo.region" content="AU-VIC">
+  <meta name="geo.placename" content="Melbourne">
+  <link rel="alternate" hreflang="en-AU" href="https://www.holland-digital.com/google-ads">
+  <meta property="og:site_name" content="Holland Digital">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:image" content="https://www.holland-digital.com/android-chrome-512x512.png">
+  <meta property="og:image:alt" content="Holland Digital — Google Ads Management Australia">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Google Ads Management Australia | Holland Digital">
+  <meta name="twitter:description" content="Google Search &amp; Performance Max for Australian businesses. Keyword strategy, conversion tracking and weekly optimisation.">
+  <meta name="twitter:image" content="https://www.holland-digital.com/android-chrome-512x512.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <meta name="theme-color" content="#0b0b0f">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -718,24 +732,44 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Holland Digital",
-    "description": "Melbourne-based web design and digital marketing agency specialising in conversion-first websites, Google Ads and Meta Ads for Australian businesses.",
-    "url": "https://www.holland-digital.com",
-    "telephone": "+61448359099",
-    "email": "jye@holland-digital.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Melbourne",
-      "addressRegion": "VIC",
-      "addressCountry": "AU"
-    },
-    "areaServed": { "@type": "Country", "name": "Australia" },
-    "serviceType": ["Web Design", "Google Ads Management", "Meta Ads Management", "Landing Page Design"],
-    "priceRange": "$$",
-    "sameAs": [
-      "https://www.instagram.com/hollanddigital_",
-      "https://www.facebook.com/profile.php?id=61588367780540"
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.holland-digital.com/google-ads#webpage",
+        "url": "https://www.holland-digital.com/google-ads",
+        "name": "Google Ads Management Australia | Holland Digital",
+        "description": "Google Search and Performance Max for Australian businesses. Keyword strategy, conversion tracking and weekly optimisation.",
+        "isPartOf": { "@id": "https://www.holland-digital.com/#website" },
+        "about": { "@id": "https://www.holland-digital.com/google-ads#service" },
+        "inLanguage": "en-AU"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.holland-digital.com/google-ads#service",
+        "name": "Google Ads Management Australia",
+        "serviceType": "Google Ads Management",
+        "provider": { "@id": "https://www.holland-digital.com/#organization" },
+        "areaServed": { "@type": "Country", "name": "Australia" },
+        "description": "Google Search and Performance Max campaign management. Keyword strategy, landing page alignment, conversion tracking, weekly optimisation. Campaigns live within 48 hours.",
+        "url": "https://www.holland-digital.com/google-ads"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.holland-digital.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Google Ads", "item": "https://www.holland-digital.com/google-ads" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "How quickly can you launch my Google Ads?", "acceptedAnswer": { "@type": "Answer", "text": "Most campaigns go live within 48 hours of the strategy call. Tracking is verified before anything goes live." } },
+          { "@type": "Question", "name": "What's the minimum ad budget you recommend?", "acceptedAnswer": { "@type": "Answer", "text": "We typically work with businesses spending $1,500–$2,000/month minimum on ad spend." } },
+          { "@type": "Question", "name": "Do you also build the landing pages?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — we can build landing pages alongside the campaign so ad copy and page messaging are perfectly aligned from day one." } },
+          { "@type": "Question", "name": "Can you take over an existing Google Ads account?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We audit your existing account first, identify what's wasting budget, and rebuild from there." } },
+          { "@type": "Question", "name": "What does management cost?", "acceptedAnswer": { "@type": "Answer", "text": "Management fees are scoped to your account size and campaign complexity. Book a strategy call for a clear number within 24 hours." } }
+        ]
+      }
     ]
   }
   </script>
